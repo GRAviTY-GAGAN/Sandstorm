@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#adminAccess {
+    cursor: pointer;
+}
+
+#adminFormCont {
+    display: none;
+    position: relative;
+    width: 550px;
+}
+
+#adminFormClose {
+    position: absolute;
+    right: 5px;
+    margin: 0.3rem;
+    cursor: pointer;
+}
+
+#adminLoginForm {
+    display: flex;
+    flex-direction: column;
+    background-color: teal;
+    padding: 2rem;
+}

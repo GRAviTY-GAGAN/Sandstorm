@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Admin here</h1>
+
+      <div>
+        <button id="addProductBtn">Add Product</button>
+        <div id="adminProductFormCont">
+          <div id="adminFormContClose">X</div>
+          <form id="adminProductForm">
+            <input
+              id="productImage"
+              type="text"
+              placeholder="Enter Product Image Link"
+            />
+            <input
+              id="productTitle"
+              type="text"
+              placeholder="Enter Product Title"
+            />
+            <input
+              id="productDesc"
+              type="text"
+              placeholder="Enter Product Description"
+            />
+            <input
+              id="productPrice"
+              type="number"
+              placeholder="Enter Product Price"
+            />
+            <select id="productGender">
+              <option value="">Select Gender</option>
+              <option value="Men">Men</option>
+              <option value="Women">Women</option>
+              <option value="Boy">Boy</option>
+              <option value="Girl">Girl</option>
+            </select>
+            <select id="productCategory">
+              <option value="">Select Category</option>
+              <option value="Top">Top</option>
+              <option value="Bottom">Bottom</option>
+              <option value="Footware">Footware</option>
+              <option value="Dress">Dress</option>
+            </select>
+            <input
+              id="productRating"
+              type="number"
+              placeholder="Enter Product Rating"
+            />
+            <button>Add</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="adminProducts">
+        <div id="adminProductsCont"></div>
+      </div>
+    </div>
+  </body>
+  <script src="admin.js"></script>
+</html>

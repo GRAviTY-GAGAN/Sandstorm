@@ -1,7 +1,61 @@
 {
-    "admin" : [
-        {"id":"admin","password":"admin@1234"}
-    ],
-    "users" : [],
-    "products" : []
+  "admin": [
+    {
+      "id": "admin",
+      "password": "admin@1234"
+    }
+  ],
+  "users": [],
+  "products": [
+    {
+      "id": 1676919698097,
+      "image": "https://n.nordstrommedia.com/id/sr3/38eff75f-d74c-42ee-ae23-018d705748d4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "title": "Moonlight Eco Short Pajamas",
+      "description": "Contrast piping outlines short menswear-inspired PJs that pair a button-up top with soft, fluid tap pants to complete the set.",
+      "price": 3157,
+      "gender": "Women",
+      "category": "Dress",
+      "rating": 143
+    },
+    {
+      "id": 1676919854916,
+      "image": "https://n.nordstrommedia.com/id/sr3/d0ea61e8-d726-4a07-9cb9-b52949a2ecaf.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+      "title": "Madrid Big Buckle Slide Sandal",
+      "description": "An oversized buckle cinches the angled bridge strap of a sandal built on the legendary Birkenstock footbed for time-tested comfort and on-trend style.",
+      "price": 12486,
+      "gender": "Women",
+      "category": "Footware",
+      "rating": 5
+    },
+    {
+      "id": 1676920061140,
+      "image": "https://n.nordstrommedia.com/id/sr3/8d886e48-5a30-4f6a-b3ed-4446b48158c3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "title": "Men's Club Crewneck Sweatshirt",
+      "description": "This crewneck sweatshirt cut from lightweight fleece is one you'll want in every color.",
+      "price": 2500,
+      "gender": "Men",
+      "category": "Top",
+      "rating": 153
+    },
+    {
+      "id": 1676920218770,
+      "image": "https://n.nordstrommedia.com/id/sr3/285f13d7-39ac-482e-81ad-0615cab19cf6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "title": "Long Sleeve Pocket T-Shirt",
+      "description": "Smart logo embroidery elevates a versatile T-shirt shaped from soft, heavyweight cotton.",
+      "price": 4459,
+      "gender": "Men",
+      "category": "Top",
+      "rating": 4
+    },
+    {
+      "id": 1676923191365,
+      "image": "https://n.nordstrommedia.com/id/sr3/88af74da-90e9-4a0a-b5fb-159455940547.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "title": "Kids' Long Sleeve Polo",
+      "description": "Long sleeves bring extra coverage to a relaxed polo cut from a kid-approved cotton-blend and centered by Essential logo graphics.",
+      "price": 4459,
+      "gender": "Boy",
+      "category": "Top",
+      "rating": 2
+    }
+  ]
 }

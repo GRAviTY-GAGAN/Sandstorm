@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#adminProductFormCont {
+    display: none;
+    width: 550px;
+    margin: auto;
+    padding: 2rem;
+    position: relative;
+    top: 5px;
+    right: 5px;
+    background-color: teal;
+}
+
+#adminFormContClose {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+}
+
+#adminProductForm>input,
+select,
+button {
+    margin: 0.5rem 0 0 0;
+}
+
+#adminProductForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.productImageCont {
+    max-width: 150px;
+    /* height: 150px; */
+
+}
+
+.productImageCont>img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.adminAddAndDeleteBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.adminProductCard {
+    /* border: 1px solid black; */
+    /* height: 150px; */
+    display: flex;
+    margin: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    padding: 1rem;
+}
+
+#adminProducts {
+    width: 80%;
+    margin: auto;
+}

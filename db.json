@@ -1,0 +1,7 @@
+{
+    "admin" : [
+        {"id":"admin","password":"admin@1234"}
+    ],
+    "users" : [],
+    "products" : []
+}

@@ -56,6 +56,26 @@
       "gender": "Boy",
       "category": "Top",
       "rating": 2
+    },
+    {
+      "id": 1676963393860,
+      "image": "https://n.nordstrommedia.com/id/sr3/697a57be-f68c-…g?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "title": "Metropolis Trousers",
+      "description": "Relaxed fitting pants exude a happy energy thanks to a popping pink hue.",
+      "price": 11500,
+      "gender": "Women",
+      "category": "Bottom",
+      "rating": 1
+    },
+    {
+      "id": 1676963574701,
+      "image": "https://n.nordstrommedia.com/id/sr3/3d93b3c9-89fd-42fc-b7fd-343f8326cb56.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "title": "Day Joggers",
+      "description": "Stay stylishly confident and comfortable as you meet friends for lunch, run errands or drop by the office in slouchy-fit joggers that are a versatile go-to.",
+      "price": 4712,
+      "gender": "Women",
+      "category": "Bottom",
+      "rating": 0
     }
   ]
 }

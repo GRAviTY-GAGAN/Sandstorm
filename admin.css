@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+#adminProductForm>label>input {
+    width: 100%;
+}
+
+#adminProductForm>label,
+div>label {
+    font-weight: 900;
+}
+
 #adminProductFormCont {
     display: none;
     width: 550px;

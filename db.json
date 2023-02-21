@@ -59,7 +59,7 @@
     },
     {
       "id": 1676963393860,
-      "image": "https://n.nordstrommedia.com/id/sr3/697a57be-f68c-…g?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "image": "https://n.nordstrommedia.com/id/sr3/cf8815ff-09b2-4da0-94c7-93e1c1521ab9.jpeg?h=365&w=240&dpr=2",
       "title": "Metropolis Trousers",
       "description": "Relaxed fitting pants exude a happy energy thanks to a popping pink hue.",
       "price": 11500,
@@ -75,7 +75,17 @@
       "price": 4712,
       "gender": "Women",
       "category": "Bottom",
-      "rating": 0
+      "rating": 3
+    },
+    {
+      "id": 1676975874737,
+      "image": "https://n.nordstrommedia.com/id/sr3/6384bd54-b69a-43e8-9262-ff852d30a715.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+      "title": "Men's Club Crewneck Sweatshirt",
+      "description": "This crewneck sweatshirt cut from lightweight fleece is one you'll want in every color.",
+      "price": 4459,
+      "gender": "Men",
+      "category": "Top",
+      "rating": 113
     }
   ]
 }

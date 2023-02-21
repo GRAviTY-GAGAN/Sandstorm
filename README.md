@@ -9,3 +9,6 @@ https://nordstorm-db-json.onrender.com/
 ## to run server
 
 json-server --watch db.json
+
+## To Run frontEnd
+use liveserver

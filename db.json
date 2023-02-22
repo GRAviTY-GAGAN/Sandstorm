@@ -58,7 +58,6 @@
       "rating": 2
     },
     {
-
       "id": 1677005125488,
       "image": "https://n.nordstrommedia.com/id/sr3/3b53dc7e-cc0f-4c80-8511-7d69079e49ad.jpeg?q=45&dpr=2&h=365.31&w=230",
       "title": "Ponte Ankle Pants",
@@ -76,7 +75,6 @@
       "price": 4334,
       "gender": "Women",
       "category": "Bottom",
-
       "rating": 4
     },
     {
@@ -247,17 +245,7 @@
       "price": 5797,
       "gender": "Boy",
       "category": "",
-      "rating": 5
-    },
-    {
-      "id": 1677007868663,
-      "image": "",
-      "title": "",
-      "description": "",
-      "price": 0,
-      "gender": "",
-      "category": "",
-      "rating": 0
+      "rating": 11
     }
   ]
 }

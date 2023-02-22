@@ -313,6 +313,13 @@
     display: none;
 }
 
+#home__subCategoryContInsideMain {
+    display: flex;
+}
+
+
+
+
 #home__navCategory>div:hover {
     border-bottom: 2px solid black;
     cursor: pointer;

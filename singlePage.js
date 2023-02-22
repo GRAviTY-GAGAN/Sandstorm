@@ -1,22 +1,17 @@
 // let addtobag = document.getElementById('addtobag');
 
-localStorage.setItem(
-  "productDetails",
-  JSON.stringify([
-    {
-      id: 1676919854916,
-      image:
-        "https://n.nordstrommedia.com/id/sr3/d0ea61e8-d726-4a07-9cb9-b52949a2ecaf.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
-      title: "Madrid Big Buckle Slide Sandal",
-      description:
-        "An oversized buckle cinches the angled bridge strap of a sandal built on the legendary Birkenstock footbed for time-tested comfort and on-trend style.",
-      price: 12486,
-      gender: "Women",
-      category: "Footware",
-      rating: 5,
-    },
-  ])
-);
+
+localStorage.setItem('productDetails', JSON.stringify([{
+    "id": 1677007835470,
+    "image": "https://n.nordstrommedia.com/id/sr3/3651d2d0-3842-4883-98f4-652a05668c6d.jpeg?h=365&w=240&dpr=2",
+    "title": "Kids' Blazer Mid '77 Sneaker",
+    "description": "Old-school basketball is alive and scoring in a '70s-reissue high-top sporting a kid-size fit and an autoclaved sole that keeps the vintage vibes hustling.",
+    "price": 5797,
+    "gender": "Boy",
+    "category": "",
+    "rating": 11
+  }]));
+
 
 //   let productDetails = JSON.parse(localStorage.getItem('productDetails'))||[];
 //   console.log(productDetails);

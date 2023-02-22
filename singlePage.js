@@ -25,7 +25,7 @@ localStorage.setItem('productDetails', JSON.stringify([{
 let api="https://nordstorm-db-json.onrender.com/products"
 
 let arr=JSON.parse(localStorage.getItem('productDetails'))||[];
-let main=document.getElementById("mainsec")
+let singlePageProductDetailsMainDiv=document.getElementById("singlePageProductDetailsMainDiv")
 
 let cart=JSON.parse(localStorage.getItem("cart"))||[]
 
@@ -41,11 +41,11 @@ check(arr)
 
 function check(data){
     console.log(data);
-   main.innerHTML=""
+    singlePageProductDetailsMainDiv.innerHTML=""
 data.forEach(element => {
     // if(element.id==arr.id || 1){
 
-        let singlePageProductDetailsMainDiv = document.createElement('div');
+       
    
 
     let img=document.createElement("img")
@@ -76,7 +76,7 @@ data.forEach(element => {
 
     let select=document.createElement("select")
 let option1=document.createElement("option")
-option1.innerText="CHHOSE SIZE"
+option1.innerText="CHOOSE SIZE"
 
 let option2=document.createElement("option")
 option2.innerText="S"
@@ -95,8 +95,8 @@ select.append(option1,option2,option3,option4)
 
     right.append(p, price,description, rating ,select,add )
    
+
     singlePageProductDetailsMainDiv.append(left,right)
-main.append(singlePageProductDetailsMainDiv)
     });
 }
 

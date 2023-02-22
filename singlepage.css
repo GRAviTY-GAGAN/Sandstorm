@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -145,62 +144,184 @@
 
 
 #singlePageProductDetailsMainDiv {
-            
-    width:90%;
+
+    width: 90%;
     display: flex;
     margin: auto;
-    
+
 }
-#left{
-    
-    width:50%;
-    
+
+#left {
+
+    width: 50%;
+
 }
-#left img{
-    
-    width:50%;
-    
+
+#left img {
+
+    width: 50%;
+
 }
-#left img:hover{
-    
+
+#left img:hover {
+
     /* width:40%;
     transform:rotateY(180deg);
     max-zoom: 45px; */
 }
-#right{
-    
-    width:30%;
-    
+
+#right {
+
+    width: 30%;
+
     margin-left: 10px;
     margin-top: 10px;
 }
-#right p{
-    
-    margin-top:10px ;
-}
-#right h1{
-    
-    margin-top:10px ;
-}
-#right select{
 
-    width:100%;
+#right p {
+
+    margin-top: 10px;
+}
+
+#right h1 {
+
+    margin-top: 10px;
+}
+
+#right select {
+
+    width: 100%;
     margin-top: 10px;
     padding: 10px;
-   
+
 
 }
 
-#sizeselection{
-    width:100%;
+#sizeselection {
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
 
 }
-#right button{
-    
-    margin-top:10px ;
+
+#right button {
+
+    margin-top: 10px;
     width: 100%;
     padding: 10px;
 }
 
+/* Footer Styles Starts------------------------------------------ */
+#adminAccess {
+    cursor: pointer;
+    width: fit-content;
+    font-size: small;
+    margin-bottom: 1rem;
+}
+
+#home__footerTermsandCondition {
+    /* display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr 0.5fr; */
+    width: fit-content;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home__footerTermsandCondition>div {
+    width: fit-content;
+    margin-right: 3rem;
+    border-bottom: 2px solid transparent;
+}
+
+#home__footerTermsandCondition>div:hover {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+#adminAccess:hover {
+    border-bottom: 2px solid black;
+}
+
+#adminFormCont {
+    display: none;
+    position: relative;
+    width: 350px;
+}
+
+#adminFormClose {
+    position: absolute;
+    right: 5px;
+    margin: 0.3rem;
+    cursor: pointer;
+}
+
+#adminLoginForm {
+    display: flex;
+    flex-direction: column;
+    background-color: teal;
+    padding: 2rem;
+}
+
+#adminLoginForm>input {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-size: medium;
+}
+
+#adminLoginForm>button {
+    /* margin-bottom: 0.5rem; */
+    padding: 0.5rem;
+    font-size: medium;
+}
+
+#home__footer {
+    background-color: #f6f9ff;
+    padding: 2rem;
+}
+
+#home__footerSubCont {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+#home__footerSubCont>div {
+    /* margin-right: 1rem; */
+}
+
+#home__footerSubCont>div>p {
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    width: fit-content;
+    font-size: small;
+}
+
+#home__footerSubCont>div>p:nth-of-type(1) {
+    font-weight: 800;
+}
+
+#home__footerSubCont>div>p:hover {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+#home__footerIcons {
+    display: flex;
+    /* justify-content: space-between; */
+    /* margin-right: 0.5rem; */
+}
+
+#home__footerIcons>div {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+
+}
+
+/* Footer Styles Ends------------------------------------------ */

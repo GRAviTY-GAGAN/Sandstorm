@@ -7,6 +7,25 @@ let adminFormPassword = document.getElementById("adminFormPassword");
 
 let baseURL = "http://localhost:3000";
 
+// navbar start-------------------------------------------------------------------
+let home__searchBar = document.getElementById("home__searchBar");
+let home__cart = document.getElementById("home__cart");
+let home__logo = document.getElementById("home__logo");
+
+home__logo.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+home__searchBar.addEventListener("click", () => {
+  window.location.href = "Singlepage.html";
+});
+
+home__cart.addEventListener("click", () => {
+  window.location.href = "cart.html";
+});
+
+// navbar End------------------------------------------------------------------------
+
 // navBar Category start---------------------------------------------------------------
 let home__categoryName = document.querySelectorAll("#home__categoryName");
 let home__subCategoryCont = document.querySelectorAll("#home__subCategoryCont");
@@ -45,12 +64,9 @@ home__categoryName.forEach((el) => {
 
 let home__slides = document.querySelectorAll(".home__slides");
 let home__carousalNextBtn = document.getElementById("home__carousalNextBtn");
-let home__searchBar = document.getElementById("home__searchBar");
+
 let home__carousalPrevBtn = document.getElementById("home__carousalPrevBtn");
 
-home__searchBar.addEventListener("click", () => {
-  window.location.href = "Singlepage.html";
-});
 // console.log(home__slides.length);
 
 let slidesCount = 0;

@@ -11,6 +11,7 @@
     --gray: #b3b3b3
 }
 
+/* navbar starts----------------------------------------------------------------- */
 #home__cart {
     font-size: larger;
     position: relative;
@@ -49,6 +50,13 @@
     width: 50%;
     font-size: x-large;
 }
+
+#home__logo {
+    cursor: pointer;
+}
+
+/* navbar ends------------------------------------------------------------------------ */
+
 
 #home__mainCont {
     padding: 0 2rem;

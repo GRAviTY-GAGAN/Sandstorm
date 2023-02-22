@@ -1,6 +1,191 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+#home__mainCont {
+    padding: 0 2rem;
+}
+
+/* Navbar starts-------------------------------------------------------------------- */
+
+#home__cart {
+    font-size: larger;
+    position: relative;
+}
+
+#home__logo {
+    cursor: pointer;
+}
+
+#home__cartLength {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    text-align: center;
+    font-size: small;
+    border-radius: 50%;
+    color: white;
+}
+
+#home__searchBar>input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: large;
+}
+
+#home__linksCont {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#home__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray);
+}
+
+#home__searchBar {
+    display: flex;
+    align-items: center;
+
+}
+
+#home__searchBarCont {
+    border: 1px solid black;
+    padding: 0.5rem;
+    width: 50%;
+    font-size: x-large;
+}
+
+/* Navbar Ends-------------------------------------------------------------------------- */
+
+
+/* Footer Styles Starts------------------------------------------ */
+#adminAccess {
+    cursor: pointer;
+    width: fit-content;
+    font-size: small;
+    margin-bottom: 1rem;
+}
+
+#home__footerTermsandCondition {
+    /* display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr 0.5fr; */
+    width: fit-content;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home__footerTermsandCondition>div {
+    width: fit-content;
+    margin-right: 3rem;
+    border-bottom: 2px solid transparent;
+}
+
+#home__footerTermsandCondition>div:hover {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+#adminAccess:hover {
+    border-bottom: 2px solid black;
+}
+
+#adminFormCont {
+    display: none;
+    position: relative;
+    width: 350px;
+}
+
+#adminFormClose {
+    position: absolute;
+    right: 5px;
+    margin: 0.3rem;
+    cursor: pointer;
+}
+
+#adminLoginForm {
+    display: flex;
+    flex-direction: column;
+    background-color: teal;
+    padding: 2rem;
+}
+
+#adminLoginForm>input {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-size: medium;
+}
+
+#adminLoginForm>button {
+    /* margin-bottom: 0.5rem; */
+    padding: 0.5rem;
+    font-size: medium;
+}
+
+#home__footer {
+    background-color: #f6f9ff;
+    padding: 2rem;
+}
+
+#home__footerSubCont {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+#home__footerSubCont>div {
+    /* margin-right: 1rem; */
+}
+
+#home__footerSubCont>div>p {
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    width: fit-content;
+    font-size: small;
+}
+
+#home__footerSubCont>div>p:nth-of-type(1) {
+    font-weight: 800;
+}
+
+#home__footerSubCont>div>p:hover {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+#home__footerIcons {
+    display: flex;
+    /* justify-content: space-between; */
+    /* margin-right: 0.5rem; */
+}
+
+#home__footerIcons>div {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+
+}
+
+/* Footer Styles Ends------------------------------------------ */

@@ -45,9 +45,13 @@ home__categoryName.forEach((el) => {
 
 let home__slides = document.querySelectorAll(".home__slides");
 let home__carousalNextBtn = document.getElementById("home__carousalNextBtn");
+let home__searchBar = document.getElementById("home__searchBar");
 let home__carousalPrevBtn = document.getElementById("home__carousalPrevBtn");
 
-console.log(home__slides.length);
+home__searchBar.addEventListener("click", () => {
+  window.location.href = "Singlepage.html";
+});
+// console.log(home__slides.length);
 
 let slidesCount = 0;
 

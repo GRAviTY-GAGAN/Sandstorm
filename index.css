@@ -11,9 +11,16 @@
     --gray: #b3b3b3
 }
 
+
+/* Navbar starts------------------------------------------------------------------- */
+
 #home__cart {
     font-size: larger;
     position: relative;
+}
+
+#home__logo {
+    cursor: pointer;
 }
 
 #home__cartLength {
@@ -50,6 +57,23 @@
     font-size: x-large;
 }
 
+#home__searchBar>input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: large;
+}
+
+#home__linksCont {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Navbar Ends------------------------------------------------------------------------- */
 #home__mainCont {
     padding: 0 2rem;
 }
@@ -325,21 +349,7 @@
     cursor: pointer;
 }
 
-#home__searchBar>input {
-    border: none;
-    outline: none;
-    width: 100%;
-    margin-left: 10px;
-    font-size: large;
-}
 
-#home__linksCont {
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
 
 
 

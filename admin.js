@@ -12,12 +12,17 @@ let productRating = document.getElementById("productRating");
 let adminProductsCont = document.getElementById("adminProductsCont");
 let postProductBtn = document.getElementById("postProductBtn");
 let patchProductBtn = document.getElementById("patchProductBtn");
+let goToHomePage = document.getElementById("goToHomePage");
 
 let baseURL = "http://localhost:3000";
 
 let adminProductsData = [];
 
 let idToBeEdited = null;
+
+goToHomePage.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
 
 patchProductBtn.addEventListener("click", (e) => {
   e.preventDefault();

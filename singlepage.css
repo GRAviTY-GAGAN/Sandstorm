@@ -1,0 +1,68 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mainsec{
+            
+    width:90%;
+    display: flex;
+    margin: auto;
+    
+}
+#left{
+    
+    width:50%;
+    
+}
+#left img{
+    
+    width:50%;
+    
+}
+#left img:hover{
+    
+    width:40%;
+    transform:rotateY(180deg);
+    max-zoom: 45px;
+}
+#right{
+    
+    width:30%;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#right p{
+    
+    margin-top:10px ;
+}
+#right h1{
+    
+    margin-top:10px ;
+}
+#right select{
+
+    width:100%;
+    margin-top: 10px;
+    padding: 10px;
+   
+
+}
+
+#sizeselection{
+    width:100%;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+#right button{
+    
+    margin-top:10px ;
+    width: 100%;
+    padding: 10px;
+}
+

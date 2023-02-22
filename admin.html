@@ -9,53 +9,77 @@
   </head>
   <body>
     <div>
-      <h1>Admin here</h1>
+      <div id="nav">
+        <h1>Admin here</h1>
+        <h1 id="goToHomePage">SANDSTORM</h1>
+      </div>
 
       <div>
         <button id="addProductBtn">Add Product</button>
         <div id="adminProductFormCont">
           <div id="adminFormContClose">X</div>
           <form id="adminProductForm">
-            <input
-              id="productImage"
-              type="text"
-              placeholder="Enter Product Image Link"
-            />
-            <input
-              id="productTitle"
-              type="text"
-              placeholder="Enter Product Title"
-            />
-            <input
-              id="productDesc"
-              type="text"
-              placeholder="Enter Product Description"
-            />
-            <input
-              id="productPrice"
-              type="number"
-              placeholder="Enter Product Price"
-            />
-            <select id="productGender">
-              <option value="">Select Gender</option>
-              <option value="Men">Men</option>
-              <option value="Women">Women</option>
-              <option value="Boy">Boy</option>
-              <option value="Girl">Girl</option>
-            </select>
-            <select id="productCategory">
-              <option value="">Select Category</option>
-              <option value="Top">Top</option>
-              <option value="Bottom">Bottom</option>
-              <option value="Footware">Footware</option>
-              <option value="Dress">Dress</option>
-            </select>
-            <input
-              id="productRating"
-              type="number"
-              placeholder="Enter Product Rating"
-            />
-            <button>Add</button>
+            <label
+              >Image:
+              <input
+                id="productImage"
+                type="text"
+                placeholder="Enter Product Image Link"
+            /></label>
+
+            <label
+              >Title:
+              <input
+                id="productTitle"
+                type="text"
+                placeholder="Enter Product Title"
+            /></label>
+            <label
+              >Description:
+              <input
+                id="productDesc"
+                type="text"
+                placeholder="Enter Product Description"
+            /></label>
+            <label
+              >Price:
+              <input
+                id="productPrice"
+                type="number"
+                placeholder="Enter Product Price"
+            /></label>
+            <div>
+              <label
+                >Gender:
+                <select id="productGender">
+                  <option value="">Select Gender</option>
+                  <option value="Men">Men</option>
+                  <option value="Women">Women</option>
+                  <option value="Boy">Boy</option>
+                  <option value="Girl">Girl</option>
+                </select></label
+              >
+              <label
+                >Category:
+                <select id="productCategory">
+                  <option value="">Select Category</option>
+                  <option value="Top">Top</option>
+                  <option value="Bottom">Bottom</option>
+                  <option value="Footware">Footware</option>
+                  <option value="Dress">Dress</option>
+                </select></label
+              >
+            </div>
+            <label
+              >Rating:
+              <input
+                id="productRating"
+                type="number"
+                placeholder="Enter Product Rating"
+            /></label>
+
+            <button id="postProductBtn">Add</button>
+            <button id="patchProductBtn">Edit</button>
           </form>
         </div>
       </div>

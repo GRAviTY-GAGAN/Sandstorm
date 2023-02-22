@@ -6,12 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <!-- just use the below tag to get font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- just use the above tag to get font awesome -->
   </head>
   <body>
-    <div>
-      <nav></nav>
+    <div id="home__mainCont">
+      <nav id="home__nav">
+        <div><h1>SANDSTORM</h1></div>
+        <div id="home__searchBarCont">
+          <div id="home__searchBar">
+            <i class="fa-solid fa-magnifying-glass"></i
+            ><input type="text" placeholder="Search for Products" />
+          </div>
+        </div>
+        <div id="home__linksCont">
+          <div>Login</div>
+          <div>Purchases</div>
+          <div id="home__cart">
+            <div id="home__cartLength">0</div>
+            <i class="fa-solid fa-cart-arrow-down"></i>
+          </div>
+        </div>
+      </nav>
+
+      <div id="home__navCategory">
+        <div data-name="sale" id="home__categoryName">Sale</div>
+        <div data-name="women" id="home__categoryName">Women</div>
+        <div data-name="men" id="home__categoryName">Men</div>
+        <div data-name="kids" id="home__categoryName">Kids</div>
+        <div data-name="designer" id="home__categoryName">Designer</div>
+        <div data-name="youngAdult" id="home__categoryName">Young Adult</div>
+        <div data-name="activewear" id="home__categoryName">Activewear</div>
+        <div data-name="home" id="home__categoryName">Home</div>
+        <div data-name="beauty" id="home__categoryName">Beauty</div>
+        <div data-name="gifts" id="home__categoryName">Gifts</div>
+        <div data-name="threads" id="home__categoryName">The Threads</div>
+      </div>
+      <div id="home__subCategoryMainCont">
+        <div data-name="sale" id="home__subCategoryCont">CONTAINER 1</div>
+        <div data-name="women" id="home__subCategoryCont">CONTAINER 2</div>
+        <div data-name="men" id="home__subCategoryCont">CONTAINER 3</div>
+        <div data-name="kids" id="home__subCategoryCont">CONTAINER 4</div>
+        <div data-name="designer" id="home__subCategoryCont">CONTAINER 5</div>
+        <div data-name="youngAdult" id="home__subCategoryCont">CONTAINER 6</div>
+        <div data-name="activewear" id="home__subCategoryCont">CONTAINER 7</div>
+        <div data-name="home" id="home__subCategoryCont">CONTAINER 8</div>
+        <div data-name="beauty" id="home__subCategoryCont">CONTAINER 9</div>
+        <div data-name="gifts" id="home__subCategoryCont">CONTAINER 10</div>
+        <div data-name="threads" id="home__subCategoryCont">CONTAINER 11</div>
+      </div>
+
+      <div id="home__carousalMainCont">
+        <div id="home__carousal">
+          <img src="./images/carousal1.png" class="home__slides" alt="" />
+          <img src="./images/carousal2.png" class="home__slides" alt="" />
+          <img src="./images/carousal3.png" class="home__slides" alt="" />
+        </div>
+        <div id="home__carousalPrevBtn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div id="home__carousalNextBtn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
       <footer>
-        <div id="adminAccess">Admin Access</div>
+        <h3 id="adminAccess">Admin Access</h3>
         <div id="adminFormCont">
           <div id="adminFormClose">X</div>
           <form id="adminLoginForm">

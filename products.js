@@ -38,18 +38,20 @@ products__typeCollaps.addEventListener("click", () => {
 
 let baseURL = "http://localhost:3000";
 let productsData = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // navbar start-------------------------------------------------------------------
 let home__searchBar = document.getElementById("home__searchBar");
 let home__cart = document.getElementById("home__cart");
 let home__logo = document.getElementById("home__logo");
+let home__cartLength = document.getElementById("home__cartLength");
 
 home__logo.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
 home__searchBar.addEventListener("click", () => {
-  window.location.href = "Singlepage.html";
+  window.location.href = "products.html";
 });
 
 home__cart.addEventListener("click", () => {
@@ -66,6 +68,8 @@ window.addEventListener("load", () => {
       productsData = [...res];
       displayProducts(productsData);
     });
+  cart = JSON.parse(localStorage.getItem("cart")) || [];
+  home__cartLength.innerText = cart.length;
 });
 
 function displayProducts(data) {

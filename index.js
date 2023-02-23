@@ -6,11 +6,13 @@ let adminFormUsername = document.getElementById("adminFormUsername");
 let adminFormPassword = document.getElementById("adminFormPassword");
 
 let baseURL = "http://localhost:3000";
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // navbar start-------------------------------------------------------------------
 let home__searchBar = document.getElementById("home__searchBar");
 let home__cart = document.getElementById("home__cart");
 let home__logo = document.getElementById("home__logo");
+let home__cartLength = document.getElementById("home__cartLength");
 
 home__logo.addEventListener("click", () => {
   window.location.href = "index.html";
@@ -22,6 +24,10 @@ home__searchBar.addEventListener("click", () => {
 
 home__cart.addEventListener("click", () => {
   window.location.href = "cart.html";
+});
+
+window.addEventListener("load", () => {
+  home__cartLength.innerText = cart.length;
 });
 
 // navbar End------------------------------------------------------------------------

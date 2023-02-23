@@ -24,15 +24,7 @@ window.addEventListener("load", () => {
 //   ])
 // );
 
-//   let productDetails = JSON.parse(localStorage.getItem('productDetails'))||[];
-//   console.log(productDetails);
 
-//   let cartData = JSON.parse(localStorage.getItem('cartData')) || []
-
-//   addtobag.addEventListener('click', ()=> {
-//     cartData.push(productDetails);
-//     localStorage.setItem('cartData', JSON.stringify(cartData))
-//   })
 
 let api = "https://nordstorm-db-json.onrender.com/products";
 
@@ -56,7 +48,8 @@ let right = document.getElementById("right");
 // .then((data)=>{
 
 // })
-
+let cartLength=document.getElementById("home__cartLength")
+cartLength.innerText=cart.length
 check(arr);
 
 function check(data) {

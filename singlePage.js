@@ -1,22 +1,28 @@
 // let addtobag = document.getElementById('addtobag');
 
-localStorage.setItem(
-  "productDetails",
-  JSON.stringify([
-    {
-      id: 1677007835470,
-      image:
-        "https://n.nordstrommedia.com/id/sr3/3651d2d0-3842-4883-98f4-652a05668c6d.jpeg?h=365&w=240&dpr=2",
-      title: "Kids' Blazer Mid '77 Sneaker",
-      description:
-        "Old-school basketball is alive and scoring in a '70s-reissue high-top sporting a kid-size fit and an autoclaved sole that keeps the vintage vibes hustling.",
-      price: 5797,
-      gender: "Boy",
-      category: "",
-      rating: 11,
-    },
-  ])
-);
+let arr = JSON.parse(localStorage.getItem("productDetails")) || [];
+
+window.addEventListener("load", () => {
+  arr = JSON.parse(localStorage.getItem("productDetails")) || [];
+});
+
+// localStorage.setItem(
+//   "productDetails",
+//   JSON.stringify([
+//     {
+//       id: 1677007835470,
+//       image:
+//         "https://n.nordstrommedia.com/id/sr3/3651d2d0-3842-4883-98f4-652a05668c6d.jpeg?h=365&w=240&dpr=2",
+//       title: "Kids' Blazer Mid '77 Sneaker",
+//       description:
+//         "Old-school basketball is alive and scoring in a '70s-reissue high-top sporting a kid-size fit and an autoclaved sole that keeps the vintage vibes hustling.",
+//       price: 5797,
+//       gender: "Boy",
+//       category: "",
+//       rating: 11,
+//     },
+//   ])
+// );
 
 //   let productDetails = JSON.parse(localStorage.getItem('productDetails'))||[];
 //   console.log(productDetails);
@@ -32,10 +38,14 @@ let api = "https://nordstorm-db-json.onrender.com/products";
 
 let checkSizeSelected = "";
 
-let arr = JSON.parse(localStorage.getItem("productDetails")) || [];
 let singlePageProductDetailsMainDiv = document.getElementById(
   "singlePageProductDetailsMainDiv"
 );
+
+let home__searchBar = document.getElementById("home__searchBar");
+home__searchBar.addEventListener("click", () => {
+  window.location.href = "products.html";
+});
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -125,7 +135,7 @@ function Cart1(para) {
   if (checkSizeSelected == "") {
     alert("Please Select The Size");
   } else if (falg == true) {
-    alert("product alredy in cart");
+    alert("product already in cart");
   } else {
     para.size = checkSizeSelected;
     para.qty = 1;

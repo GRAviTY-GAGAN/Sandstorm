@@ -8,7 +8,7 @@ home__logo.addEventListener("click", () => {
 });
 
 home__searchBar.addEventListener("click", () => {
-  window.location.href = "Singlepage.html";
+  window.location.href = "products.html";
 });
 
 home__cart.addEventListener("click", () => {

@@ -1,9 +1,14 @@
 // let addtobag = document.getElementById('addtobag');
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartLength = document.getElementById("home__cartLength");
+cartLength.innerText = cart.length;
 
 let arr = JSON.parse(localStorage.getItem("productDetails")) || [];
 
 window.addEventListener("load", () => {
   arr = JSON.parse(localStorage.getItem("productDetails")) || [];
+  cartLength.innerText = cart.length;
+  check(arr);
 });
 
 // localStorage.setItem(
@@ -24,8 +29,6 @@ window.addEventListener("load", () => {
 //   ])
 // );
 
-
-
 let api = "https://nordstorm-db-json.onrender.com/products";
 
 let checkSizeSelected = "";
@@ -39,8 +42,6 @@ home__searchBar.addEventListener("click", () => {
   window.location.href = "products.html";
 });
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 let left = document.getElementById("left");
 let right = document.getElementById("right");
 // fetch(api)
@@ -48,9 +49,6 @@ let right = document.getElementById("right");
 // .then((data)=>{
 
 // })
-let cartLength=document.getElementById("home__cartLength")
-cartLength.innerText=cart.length
-check(arr);
 
 function check(data) {
   console.log(data);
@@ -135,6 +133,7 @@ function Cart1(para) {
     cart.push(para);
     alert("Product added to cart");
     localStorage.setItem("cart", JSON.stringify(cart));
+    cartLength.innerText = cart.length;
   }
 }
 

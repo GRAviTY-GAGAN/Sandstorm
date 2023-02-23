@@ -26,6 +26,9 @@
     right: -15px;
     text-align: center;
     font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     color: white;
 }

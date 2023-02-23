@@ -112,6 +112,21 @@
     justify-content: space-between;
 }
 
+#products__notFoundMainCont {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+#products__notFoundline1 span {
+    font-size: xx-large;
+}
+
+#products__notFoundMainCont p {
+    font-weight: 600;
+    font-size: larger;
+}
+
 #products__filtersCont {
     display: flex;
     flex-direction: column;

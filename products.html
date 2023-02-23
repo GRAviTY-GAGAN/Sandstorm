@@ -27,7 +27,13 @@
         <div id="home__searchBarCont">
           <div id="home__searchBar">
             <i class="fa-solid fa-magnifying-glass"></i
-            ><input type="text" placeholder="Search for Products" />
+            ><input
+              id="home__search"
+              type="text"
+              autocomplete="off"
+              placeholder="Search for Products"
+              oninput="debounceSearch()"
+            />
           </div>
         </div>
         <div id="home__linksCont">
@@ -59,16 +65,40 @@
               </div>
             </div>
             <div>
-              <label><input type="checkbox" />Boys</label>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Boy"
+                  type="checkbox"
+                />Boys</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Girls</label>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Girl"
+                  type="checkbox"
+                />Girls</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Men</label>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Men"
+                  type="checkbox"
+                />Men</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Women</label>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Women"
+                  type="checkbox"
+                />Women</label
+              >
             </div>
           </div>
           <div id="products__productTypeFilter">
@@ -84,16 +114,40 @@
               </div>
             </div>
             <div>
-              <label><input type="checkbox" />Top</label>
+              <label
+                ><input
+                  data-name="type"
+                  value="Top"
+                  type="checkbox"
+                />Top</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Bottom</label>
+              <label
+                ><input
+                  data-name="type"
+                  value="Bottom"
+                  type="checkbox"
+                />Bottom</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Dress</label>
+              <label
+                ><input
+                  data-name="type"
+                  value="Dress"
+                  type="checkbox"
+                />Dress</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Footware</label>
+              <label
+                ><input
+                  data-name="type"
+                  value="Footware"
+                  type="checkbox"
+                />Footware</label
+              >
             </div>
           </div>
           <div id="products__filterAddMainCont">

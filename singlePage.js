@@ -138,6 +138,7 @@ function Cart1(para) {
   }
 }
 
+
 // Navbar link to cart start----------------------------------------------------------
 let home__cart = document.getElementById("home__cart");
 let home__logo = document.getElementById("home__logo");

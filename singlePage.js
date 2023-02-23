@@ -2,26 +2,18 @@
 
 
 localStorage.setItem('productDetails', JSON.stringify([{
-    "id": 1677007835470,
-    "image": "https://n.nordstrommedia.com/id/sr3/3651d2d0-3842-4883-98f4-652a05668c6d.jpeg?h=365&w=240&dpr=2",
-    "title": "Kids' Blazer Mid '77 Sneaker",
-    "description": "Old-school basketball is alive and scoring in a '70s-reissue high-top sporting a kid-size fit and an autoclaved sole that keeps the vintage vibes hustling.",
-    "price": 5797,
-    "gender": "Boy",
-    "category": "",
-    "rating": 11
-  }]));
+  "id": 1677006870174,
+  "image": "https://n.nordstrommedia.com/id/sr3/cc8dec3e-b657-4970-b818-bee1b5a58959.jpeg?h=365&w=240&dpr=2",
+  "title": "Amira Tiered Cotton Midi Dress",
+  "description": "Lightweight gauzy cotton is shaped into this pretty midi dress designed with a flowy tiered skirt that sways with every step you take.",
+  "price": 3400,
+  "gender": "Girl",
+  "category": "Dress",
+  "rating": 4
+}]));
 
 
-//   let productDetails = JSON.parse(localStorage.getItem('productDetails'))||[];
-//   console.log(productDetails);
 
-//   let cartData = JSON.parse(localStorage.getItem('cartData')) || []
-
-//   addtobag.addEventListener('click', ()=> {
-//     cartData.push(productDetails);
-//     localStorage.setItem('cartData', JSON.stringify(cartData))
-//   })
 
 let api = "https://nordstorm-db-json.onrender.com/products";
 
@@ -39,7 +31,8 @@ let right = document.getElementById("right");
 // .then((data)=>{
 
 // })
-
+let cartLength=document.getElementById("home__cartLength")
+cartLength.innerText=cart.length
 check(arr);
 
 function check(data) {
@@ -97,12 +90,16 @@ function check(data) {
 function Cart1(para) {
   for (let i of cart) {
     if (i.id == para.id) {
-      alert("product alredy in cart");
+      alert("product allready in Bag");
       return false;
     }
   }
-  cart.push(para);
-  alert("Product added to cart");
+ 
+  cart.push({...para,quantity:1});
+  cartLength=cart.length
+  window.location.reload()
+  console.log(cart.length)
+  alert("Product added to Bag");
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 

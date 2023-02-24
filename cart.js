@@ -15,6 +15,11 @@ home__cart.addEventListener("click", () => {
   window.location.href = "cart.html";
 });
 
+let checkout=document.getElementById("checkout")
+checkout.addEventListener("click",()=>{
+  window.location.href="./checkout.html"
+})
+
 // navbar End------------------------------------------------------------------------
 
 //start to append products..............................................
@@ -22,7 +27,9 @@ cartpagedatamain = document.getElementById("cartpagedatamain");
 imageofcart = document.getElementById("imageofcart");
 detailofcartpoducts = document.getElementById("detailofcartpoducts");
 let cartLength = document.getElementById("home__cartLength");
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 let itemscount = document.getElementById("totalitemcount");
 
 cartLength.innerText = cart.length;
@@ -35,6 +42,7 @@ function displayandShow(cart) {
   cartLength.innerText = cart.length;
   cartpagedatamain.innerHTML = "";
   let totalprice = document.getElementById("total-price");
+  
   cart.forEach((ele) => {
     let cardMainCont = document.createElement("div");
     cardMainCont.classList = "cart__singleProductCard"; //give display flex

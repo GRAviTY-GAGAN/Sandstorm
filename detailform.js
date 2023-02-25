@@ -5,6 +5,9 @@ showCartItem(cartAddedProd)
 cartTotal(cartAddedProd)
 methoddel(deliveryLsdata)
 ADDRESSDEATIL(deliveryLsdata)
+
+
+
 function methoddel(data) {
     let delMehtod = document.getElementById("del-Method")
     delMehtod.innerHTML = null;

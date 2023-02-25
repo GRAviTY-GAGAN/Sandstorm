@@ -1,4 +1,4 @@
-// let addtobag = document.getElementById('addtobag');
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let cartLength = document.getElementById("home__cartLength");
 cartLength.innerText = cart.length;
@@ -11,23 +11,7 @@ window.addEventListener("load", () => {
   check(arr);
 });
 
-// localStorage.setItem(
-//   "productDetails",
-//   JSON.stringify([
-//     {
-//       id: 1677007835470,
-//       image:
-//         "https://n.nordstrommedia.com/id/sr3/3651d2d0-3842-4883-98f4-652a05668c6d.jpeg?h=365&w=240&dpr=2",
-//       title: "Kids' Blazer Mid '77 Sneaker",
-//       description:
-//         "Old-school basketball is alive and scoring in a '70s-reissue high-top sporting a kid-size fit and an autoclaved sole that keeps the vintage vibes hustling.",
-//       price: 5797,
-//       gender: "Boy",
-//       category: "",
-//       rating: 11,
-//     },
-//   ])
-// );
+
 
 let api = "https://nordstorm-db-json.onrender.com/products";
 
@@ -44,17 +28,13 @@ home__searchBar.addEventListener("click", () => {
 
 let left = document.getElementById("left");
 let right = document.getElementById("right");
-// fetch(api)
-// .then((req)=>req.json())
-// .then((data)=>{
 
-// })
 
 function check(data) {
-  console.log(data);
+  
   singlePageProductDetailsMainDiv.innerHTML = "";
   data.forEach((element) => {
-    // if(element.id==arr.id || 1){
+    
 
     let img = document.createElement("img");
     img.src = element.image;
@@ -78,7 +58,7 @@ function check(data) {
     add.addEventListener("click", (e) => {
       e.preventDefault();
       Cart1(element);
-      console.log(23);
+    
     });
 
     let select = document.createElement("select");
@@ -106,12 +86,7 @@ function check(data) {
 }
 
 function Cart1(para) {
-  // for (let i of cart) {
-  //   if (i.id == para.id) {
-  //     alert("product alredy in cart");
-  //     return false;
-  //   }
-  // }
+  
   let falg = false;
 
   falg = cart.some((item) => {
@@ -126,12 +101,12 @@ function Cart1(para) {
   if (checkSizeSelected == "") {
     alert("Please Select The Size");
   } else if (falg == true) {
-    alert("product already in cart");
+    alert("product already in Bag");
   } else {
     para.size = checkSizeSelected;
     para.qty = 1;
     cart.push(para);
-    alert("Product added to cart");
+    alert("Product added to Bag");
     localStorage.setItem("cart", JSON.stringify(cart));
     cartLength.innerText = cart.length;
   }

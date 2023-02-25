@@ -27,12 +27,18 @@
         <div id="home__searchBarCont">
           <div id="home__searchBar">
             <i class="fa-solid fa-magnifying-glass"></i
-            ><input type="text" placeholder="Search for Products" />
+            ><input
+              id="home__search"
+              type="text"
+              autocomplete="off"
+              placeholder="Search for Products"
+              oninput="debounceSearch()"
+            />
           </div>
         </div>
         <div id="home__linksCont">
-          <div>Login</div>
-          <div>Purchases</div>
+          <div id="home__login">Login</div>
+          <div id="home__purchase">Purchases</div>
           <div id="home__cart">
             <div id="home__cartLength">0</div>
             <i class="fa-solid fa-cart-arrow-down"></i>
@@ -42,9 +48,18 @@
       <!-- NAVBAR- Ends------------------------------------------ -->
 
       <div id="products__add1"><img src="./images/adds1.png" alt="" /></div>
-
+      <div>
+        <select id="products__sort">
+          <option value="">SORT OUT</option>
+          <option value="plh">Price low to high</option>
+          <option value="phl">Price high to low</option>
+          <option value="rlh">Rating low to high</option>
+          <option value="rhl">Rating high to low</option>
+        </select>
+      </div>
       <div id="products__productsMainCont">
         <!-- <div id="products__noResultsCont"></div> -->
+
         <div id="products__filtersCont">
           <div id="products__genderFilter">
             <div id="products__filterHeader">
@@ -58,17 +73,95 @@
                 </div>
               </div>
             </div>
-            <div>
-              <label><input type="checkbox" />Boys</label>
+            <!-- <div>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Boy"
+                  type="checkbox"
+                />Boys</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Girls</label>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Girl"
+                  type="checkbox"
+                />Girls</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Men</label>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Men"
+                  type="checkbox"
+                />Men</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Women</label>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Women"
+                  type="checkbox"
+                />Women</label
+              >
+            </div> -->
+            <!-- <select id="">
+              <option value="Boy">Boys</option>
+              <option value="Girl">Girls</option>
+              <option value="Men">Men</option>
+              <option value="Women">Women</option>
+            </select> -->
+            <div>
+              <!-- <label
+                ><input
+                  data-name="gender"
+                  value=""
+                  name="gender"
+                  type="radio"
+                />Remove</label
+              > -->
+              <label
+                ><input
+                  data-name="gender"
+                  value="Boy"
+                  name="gender"
+                  type="radio"
+                />Boys</label
+              >
+            </div>
+            <div>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Girl"
+                  name="gender"
+                  type="radio"
+                />Girls</label
+              >
+            </div>
+            <div>
+              <label
+                ><input
+                  data-name="gender"
+                  name="gender"
+                  value="Men"
+                  type="radio"
+                />Men</label
+              >
+            </div>
+            <div>
+              <label
+                ><input
+                  data-name="gender"
+                  value="Women"
+                  name="gender"
+                  type="radio"
+                />Women</label
+              >
             </div>
           </div>
           <div id="products__productTypeFilter">
@@ -83,17 +176,81 @@
                 </div>
               </div>
             </div>
-            <div>
-              <label><input type="checkbox" />Top</label>
+            <!-- <div>
+              <label
+                ><input
+                  data-name="type"
+                  value="Top"
+                  type="checkbox"
+                />Top</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Bottom</label>
+              <label
+                ><input
+                  data-name="type"
+                  value="Bottom"
+                  type="checkbox"
+                />Bottom</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Dress</label>
+              <label
+                ><input
+                  data-name="type"
+                  value="Dress"
+                  type="checkbox"
+                />Dress</label
+              >
             </div>
             <div>
-              <label><input type="checkbox" />Footware</label>
+              <label
+                ><input
+                  data-name="type"
+                  value="Footware"
+                  type="checkbox"
+                />Footware</label
+              >
+            </div> -->
+            <div>
+              <label
+                ><input
+                  data-name="type"
+                  value="Top"
+                  type="radio"
+                  name="type"
+                />Top</label
+              >
+            </div>
+            <div>
+              <label
+                ><input
+                  data-name="type"
+                  value="Bottom"
+                  type="radio"
+                  name="type"
+                />Bottom</label
+              >
+            </div>
+            <div>
+              <label
+                ><input
+                  data-name="type"
+                  value="Dress"
+                  type="radio"
+                  name="type"
+                />Dress</label
+              >
+            </div>
+            <div>
+              <label
+                ><input
+                  data-name="type"
+                  value="Footware"
+                  type="radio"
+                  name="type"
+                />Footware</label
+              >
             </div>
           </div>
           <div id="products__filterAddMainCont">
@@ -108,6 +265,10 @@
 
         <div id="products__productsCont"></div>
       </div>
+      <!-- <div id="products__paginationBtns">
+        <button id="products__paginationPrevBtn">Prev</button>
+        <button id="products__paginationNextBtn">More</button>
+      </div> -->
     </div>
     <!-- Footer Starts----------------------------------------------- -->
     <footer id="home__footer">
@@ -202,4 +363,9 @@
     </footer>
     <!-- Footer Ends------------------------------------------------------- -->
   </body>
+  <!-- <script src="products.js"></script> -->
+  <!-- <script>
+    let prod = document.getElementById("products__genderExpand");
+    console.log(prod, "prod");
+  </script> -->
 </html>

@@ -115,6 +115,11 @@ function Cart1(para) {
 // Navbar link to cart start----------------------------------------------------------
 let home__cart = document.getElementById("home__cart");
 let home__logo = document.getElementById("home__logo");
+let home__purchase = document.getElementById("home__purchase");
+
+home__purchase.addEventListener("click", () => {
+  window.location.href = "purchase.html";
+});
 
 home__logo.addEventListener("click", () => {
   window.location.href = "index.html";

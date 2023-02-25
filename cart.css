@@ -206,6 +206,10 @@
     overflow-y: scroll;
 }
 
+#cart__productSize  {
+    font-size: large;
+    font-weight: 500;
+}
 
 #cartpagedatamain {
     /* display: flex; */

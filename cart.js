@@ -37,8 +37,7 @@ function displayandShow(cart) {
   let totalprice = document.getElementById("total-price");
   cart.forEach((ele) => {
     let cardMainCont = document.createElement("div");
-    cardMainCont.classList = "cart__singleProductCard"; //give display flex
-
+    cardMainCont.classList = "cart__singleProductCard"; //give display fle
     let imageCont = document.createElement("div");
 
     let img = document.createElement("img");
@@ -61,22 +60,21 @@ function displayandShow(cart) {
     increasequantity.addEventListener("click", () => {
       itemscount.innerText = ele.qty++;
       localStorage.setItem("cart", JSON.stringify(cart));
-      console.log(ele);
       cart = JSON.parse(localStorage.getItem("cart"));
       displayandShow(cart);
 
-      // window.location.reload()
+    
     });
     decreasequantity.addEventListener("click", (e) => {
-      // e.preventDefault();
-      console.log("clicked");
+   
+     
       if (ele.qty > 1) {
         itemscount.innerText = ele.qty--;
 
         localStorage.setItem("cart", JSON.stringify(cart));
         cart = JSON.parse(localStorage.getItem("cart"));
         displayandShow(cart);
-        // window.location.reload()
+  
       }
     });
 
@@ -100,6 +98,10 @@ function displayandShow(cart) {
     let price = document.createElement("h1");
     price.innerText = "INR " + ele.price;
 
+    let size= document.createElement("p")
+    size.id = 'cart__productSize';
+    size.innerText="Size: "+ ele.size;
+
     let remove = document.createElement("button");
     remove.classList = "span";
     remove.innerText = "REMOVE";
@@ -115,13 +117,9 @@ function displayandShow(cart) {
       itemscount.innerText = cart.length;
       displayandShow(filteredCart);
     });
-    productDetailsCont.append(tiltle, description, rating, price, remove);
+    productDetailsCont.append(tiltle, description, rating, price,size, remove);
     cardMainCont.append(imageCont, productDetailsCont);
     cartpagedatamain.append(cardMainCont);
-
-    // imageofcart.append(img,increasequantity,quantity,decreasequantity)
-    //     detailofcartpoducts.append(tiltle,description,rating,price,remove)
-    //     cartpagedatamain.append(imageofcart,detailofcartpoducts)
   });
 
   let totalpricesum = 0;

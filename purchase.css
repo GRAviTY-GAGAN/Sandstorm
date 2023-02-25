@@ -11,32 +11,15 @@
     --gray: #b3b3b3
 }
 
-/* width */
-#products__productsCont::-webkit-scrollbar {
-    width: 0px;
-}
 
-/* Track */
-#products__productsCont::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
-/* Handle */
-#products__productsCont::-webkit-scrollbar-thumb {
-    background: var(--main-color);
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-#products__productsCont::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
-}
-
-
-#products__mainCont {
+#home__mainCont {
     padding: 0 2rem;
 }
+
+#purchase__mainCont {
+    min-height: 500px;
+}
+
 
 /* Navbar starts------------------------------------------------------------------- */
 
@@ -103,149 +86,6 @@
 }
 
 /* Navbar Ends------------------------------------------------------------------------- */
-
-
-#products__productsMainCont {
-    min-height: 500px;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-#products__notFoundMainCont {
-    width: 100%;
-    text-align: center;
-    margin-top: 5rem;
-}
-
-#products__notFoundline1 span {
-    font-size: xx-large;
-}
-
-#products__notFoundMainCont p {
-    font-weight: 600;
-    font-size: larger;
-}
-
-#products__filtersCont {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin-top: 5rem;
-}
-
-#products__filtersCont img {
-    width: 100%;
-}
-
-#products__ImgCont {
-    min-height: 422px;
-    max-height: 422px;
-}
-
-#products__add1>img {
-    width: 100%;
-    margin: 2rem 0;
-}
-
-#products__detailsSubCont p:nth-of-type(1),
-p:nth-of-type(3) {
-    font-weight: 700;
-}
-
-#products__detailsSubCont p {
-    font-size: 14px;
-    margin-bottom: 0.5rem;
-}
-
-#products__sort {
-    padding: 0.2rem;
-    font-size: medium;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-align: center;
-}
-
-#products__sort>option {
-    font-weight: 500;
-}
-
-#products__productTypeFilter h3,
-#products__genderFilter h3 {
-    padding: 0.5rem 0.3rem;
-
-}
-
-#products__productTypeFilter>div,
-#products__genderFilter>div {
-    padding: 0.5rem 0;
-}
-
-#products__filterHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-#products__genderCollaps,
-#products__typeCollaps {
-    display: none;
-}
-
-#products__filterAddMainCont {
-    margin-top: 2rem;
-}
-
-#products__productTypeFilter,
-#products__genderFilter {
-    /* border: 2px solid red; */
-
-    height: 56px;
-    /* height: fit-content; */
-    overflow: hidden;
-}
-
-#products__filtersCont label {
-    margin-left: 1rem;
-}
-
-#products__filtersCont input {
-    margin-right: 0.5rem;
-}
-
-#products__productTypeFilter {
-    border-bottom: 1px solid gray;
-}
-
-#products__genderFilter {
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-}
-
-#products__productsCont {
-    width: 78%;
-    max-height: 1670px;
-    overflow-y: scroll;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-
-.product__productCard {
-    width: 100%;
-}
-
-
-
-
-.product__productCard img {
-    width: 100%;
-    min-height: 389px;
-    object-fit: contain;
-}
-
 
 
 
@@ -325,6 +165,9 @@ p:nth-of-type(3) {
     gap: 1rem;
 }
 
+#home__footerSubCont>div {
+    /* margin-right: 1rem; */
+}
 
 #home__footerSubCont>div>p {
     margin-bottom: 1rem;

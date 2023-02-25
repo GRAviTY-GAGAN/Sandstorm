@@ -2,6 +2,16 @@
 let home__searchBar = document.getElementById("home__searchBar");
 let home__cart = document.getElementById("home__cart");
 let home__logo = document.getElementById("home__logo");
+let home__purchase = document.getElementById("home__purchase");
+let home__login = document.getElementById("home__login");
+
+home__login.addEventListener("click", () => {
+  window.location.href = "login.html";
+});
+
+home__purchase.addEventListener("click", () => {
+  window.location.href = "purchase.html";
+});
 
 home__logo.addEventListener("click", () => {
   window.location.href = "index.html";

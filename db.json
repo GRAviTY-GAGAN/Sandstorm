@@ -3,9 +3,22 @@
     {
       "id": "admin",
       "password": "admin@1234"
+    },
+    {
+      "id": "admin2",
+      "password": "admin@1234"
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "id": "GRAviTY",
+      "pass": "1234",
+      "name": "GAGAN",
+      "email": "gaganbn1999@gmail.com",
+      "history": [],
+      "cart": []
+    }
+  ],
   "products": [
     {
       "id": 1676919698097,

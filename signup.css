@@ -83,6 +83,42 @@
 
 /* Navbar Ends------------------------------------------------------------------------- */
 
+#signup__signupForm {
+    padding: 2rem;
+    width: 32%;
+    margin: 7rem auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    border-radius: 5px;
+}
+
+#signup__signupForm>h1 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#signup__form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup__form input {
+    border: 1px solid black;
+
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: large;
+    outline: none;
+    border-radius: 5px;
+}
+
+#signup__form input:nth-of-type(5) {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
 /* Footer Styles Starts------------------------------------------ */
 #adminAccess {
     cursor: pointer;

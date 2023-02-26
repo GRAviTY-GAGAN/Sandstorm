@@ -63,13 +63,13 @@ function methoddel(data) {
     methodName.textContent = "DELIVERY METHOD:";
 
     let delType = document.createElement("p");
-    delType.textContent = ele.method;
+    delType.textContent = ele.method.toUpperCase();
 
     let imp = document.createElement("p");
-    imp.textContent = ele.deliveryCharges;
+    imp.textContent = ele.deliveryCharges.toUpperCase();
 
     let day = document.createElement("p");
-    day.textContent = ele.deliveryTime;
+    day.textContent = ele.deliveryTime.toUpperCase();
 
     delMehtod.append(methodName, delType, imp, day);
   });
@@ -230,6 +230,7 @@ orderplaceBtn.addEventListener("click", () => {
             JSON.stringify(deliveryLsdata)
           );
           console.log(res);
+          alert(`Hey ${currentUser} your order has been Successfully placed.`);
           // displayandShow(cart);
           window.location.href = "index.html";
         })

@@ -1,10 +1,3 @@
-// let adminAccess = document.getElementById("adminAccess");
-// let adminFormCont = document.getElementById("adminFormCont");
-// let adminLoginForm = document.getElementById("adminLoginForm");
-// let adminFormClose = document.getElementById("adminFormClose");
-// let adminFormUsername = document.getElementById("adminFormUsername");
-// let adminFormPassword = document.getElementById("adminFormPassword");
-
 let baseURL = "http://localhost:3000";
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -45,23 +38,53 @@ window.addEventListener("load", () => {
 // signup form start --------------------------------------------------------------------
 
 let signup__form = document.getElementById("signup__form");
-let signup__username = document.getElementById("signup__username");
 let signup__password = document.getElementById("signup__password");
 let signup__name = document.getElementById("signup__name");
 let signup__email = document.getElementById("signup__email");
+let signup__confirmPassword = document.getElementById(
+  "signup__confirmPassword"
+);
+
+let existingUsers = [];
+let currentUser = localStorage.getItem("currrentUser") || null;
 
 signup__form.addEventListener("submit", (e) => {
   e.preventDefault();
   let userObj = {
-    id: signup__username.value,
+    id: signup__email.value,
     pass: signup__password.value,
     name: signup__name.value,
-    email: signup__email.value,
     history: [],
-    cart: [],
   };
 
-  addUser(userObj);
+  if (signup__password.value == signup__confirmPassword.value) {
+    fetch(`${baseURL}/existingUsers`)
+      .then((req) => req.json())
+      .then((res) => {
+        existingUsers = [...res];
+        let flag = false;
+        flag = existingUsers.some((item) => {
+          if (item.id == signup__email.value) {
+            flag = true;
+            return flag;
+          }
+          flag = false;
+          return flag;
+        });
+
+        if (flag) {
+          alert("User already exists");
+        } else {
+          alert("User Successfully Created");
+          addUser(userObj);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } else {
+    alert("Please check your password");
+  }
 });
 
 function addUser(data) {
@@ -72,6 +95,24 @@ function addUser(data) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
+  })
+    .then((req) => req.json())
+    .then((res) => {
+      console.log(res);
+      window.location.href = "login.html";
+      //   currentUser = res.name;
+      //   localStorage.setItem("currentUser", currentUser);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+  fetch(`${baseURL}/existingUsers`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ id: data.id }),
   })
     .then((req) => req.json())
     .then((res) => {

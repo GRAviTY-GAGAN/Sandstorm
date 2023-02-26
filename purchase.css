@@ -88,6 +88,42 @@
 /* Navbar Ends------------------------------------------------------------------------- */
 
 
+#purchase__mainCont {
+    display: flex;
+    margin: 2rem 0;
+}
+
+#purchase__mainCont>div:nth-of-type(1) {
+    width: 70%;
+}
+
+#purchase__mainCont>div:nth-of-type(2) {
+    width: 30%;
+}
+
+#purchase__subImgCont1>h2,
+strong {
+    font-weight: 500;
+}
+
+#purchase__subImgCont2 {
+    margin-top: 1rem;
+}
+
+#purchase__subImgCont1>p,
+#purchase__subImgCont2>p {
+    font-size: small;
+}
+
+#purchase__subImgCont1 img,
+#purchase__subImgCont2 img {
+    width: 90%;
+}
+
+#purchase__subImgCont2>h2,
+strong {
+    font-weight: 500;
+}
 
 
 /* Footer Styles Starts------------------------------------------ */

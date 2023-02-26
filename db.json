@@ -11,12 +11,65 @@
   ],
   "users": [
     {
-      "id": "GRAviTY",
+      "id": "gaganbn1999@gmail.com",
       "pass": "1234",
       "name": "GAGAN",
-      "email": "gaganbn1999@gmail.com",
-      "history": [],
-      "cart": []
+      "history": [
+        {
+          "date": "February 26th 2023, 3:54:13 pm",
+          "orderTotal": 9535,
+          "prducts": [
+            {
+              "id": 1677005125488,
+              "image": "https://n.nordstrommedia.com/id/sr3/3b53dc7e-cc0f-4c80-8511-7d69079e49ad.jpeg?q=45&dpr=2&h=365.31&w=230",
+              "title": "Ponte Ankle Pants",
+              "description": "A nicely weighted ponte knit creates a sleek, stretchy fit for slim pants styled with a clean front and cut to a contemporary ankle length.",
+              "price": 2851,
+              "gender": "Women",
+              "category": "Bottom",
+              "rating": 4,
+              "size": "S",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "date": "February 26th 2023, 3:55:27 pm",
+          "orderTotal": 21933,
+          "prducts": [
+            {
+              "id": 1676920218770,
+              "image": "https://n.nordstrommedia.com/id/sr3/285f13d7-39ac-482e-81ad-0615cab19cf6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Long Sleeve Pocket T-Shirt",
+              "description": "Smart logo embroidery elevates a versatile T-shirt shaped from soft, heavyweight cotton.",
+              "price": 4459,
+              "gender": "Men",
+              "category": "Top",
+              "rating": 4,
+              "size": "M",
+              "qty": 1
+            },
+            {
+              "id": 1677005529024,
+              "image": "https://n.nordstrommedia.com/id/sr3/8461b200-438a-4725-ac11-8a239d0bdd99.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Skinny Suit Jacket",
+              "description": "Stride through the office with confidence in this sleek sport coat made with notched lapels and designed for a slim, tapered fit.",
+              "price": 10790,
+              "gender": "Men",
+              "category": "Top",
+              "rating": 5,
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test123@gmail.com",
+      "pass": "1234",
+      "name": "tester1",
+      "history": []
     }
   ],
   "products": [
@@ -859,6 +912,14 @@
       "gender": "Girl",
       "category": "Dress",
       "rating": 3
+    }
+  ],
+  "existingUsers": [
+    {
+      "id": "gaganbn1999@gmail.com"
+    },
+    {
+      "id": "test123@gmail.com"
     }
   ]
 }

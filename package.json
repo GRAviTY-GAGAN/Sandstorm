@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/GRAviTY-GAGAN/righteous-hand-1433#readme",
   "dependencies": {
-    "json-server": "^0.17.1"
+    "json-server": "^0.17.1",
+    "moment": "^2.29.4"
   }
 }

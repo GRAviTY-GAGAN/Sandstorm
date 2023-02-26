@@ -9,10 +9,15 @@ let products__typeExpand = document.getElementById("products__typeExpand");
 let products__typeCollaps = document.getElementById("products__typeCollaps");
 let products__genderExpand = document.getElementById("products__genderExpand");
 let home__login = document.getElementById("home__login");
+let currentUser = localStorage.getItem("currentUser") || null;
 
-home__login.addEventListener("click", () => {
-  window.location.href = "login.html";
-});
+if (currentUser) {
+  home__login.innerText = `Hi, ${currentUser}`;
+} else {
+  home__login.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+}
 
 let products__genderCollaps = document.getElementById(
   "products__genderCollaps"
@@ -96,7 +101,7 @@ products__typeCollaps.addEventListener("click", () => {
 let baseURL = "http://localhost:3000";
 let productsData = [];
 let emojiArr = ["😑", "🤔", "😔", "😓", "😖", "😢", "😭", "🥺", "😟", "😒"];
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 
 // navbar start-------------------------------------------------------------------
 let home__searchBar = document.getElementById("home__searchBar");
@@ -165,7 +170,7 @@ function searchProducts() {
 
 window.addEventListener("load", () => {
   fetchData(`${baseURL}/products`);
-  cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart = JSON.parse(localStorage.getItem(currentUser)) || [];
   home__cartLength.innerText = cart.length;
 });
 

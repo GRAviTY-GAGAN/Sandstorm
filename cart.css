@@ -206,7 +206,7 @@
     overflow-y: scroll;
 }
 
-#cart__productSize  {
+#cart__productSize {
     font-size: large;
     font-weight: 500;
 }
@@ -293,9 +293,7 @@
 
 #subtotal {
     height: 2.5rem;
-    /* margin-right: auto; */
     width: 30%;
-    margin-top: 20px;
     font-size: 30px;
 
 }
@@ -385,6 +383,8 @@
     border-bottom: 2px solid black;
     width: fit-content;
     font-weight: 600;
+    font-size: larger;
+    letter-spacing: 1px;
 }
 
 #shipping {

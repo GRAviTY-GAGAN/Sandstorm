@@ -1,5 +1,20 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let currentUser = localStorage.getItem("currentUser") || null;
+let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 let baseURL = "http://localhost:3000";
+let currentUserId = localStorage.getItem("currentUserId") || null;
+let purchaseHistory = [];
+
+window.addEventListener("load", () => {
+  home__cartLength.innerText = cart.length;
+
+  fetch(`${baseURL}/users/${currentUserId}`)
+    .then((req) => req.json())
+    .then((res) => {
+      console.log(res.history);
+      purchaseHistory = [...res.history];
+      updatePurchasePage();
+    });
+});
 
 // navbar start-------------------------------------------------------------------
 let home__searchBar = document.getElementById("home__searchBar");
@@ -8,10 +23,26 @@ let home__logo = document.getElementById("home__logo");
 let home__cartLength = document.getElementById("home__cartLength");
 let home__purchase = document.getElementById("home__purchase");
 let home__login = document.getElementById("home__login");
+let purchase__historyCont = document.getElementById("purchase__historyCont");
 
-home__login.addEventListener("click", () => {
-  window.location.href = "login.html";
-});
+function updatePurchasePage() {
+  if (purchaseHistory.length == 0) {
+    purchase__historyCont.innerHTML = "";
+    let notify = document.createElement("h2");
+    notify.innerText = "Your Purchases will be shown here!!";
+    notify.style.textAlign = "center";
+    notify.style.fontWeight = "400";
+    purchase__historyCont.append(notify);
+  }
+}
+
+if (currentUser) {
+  home__login.innerText = `Hi, ${currentUser}`;
+} else {
+  home__login.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+}
 
 home__purchase.addEventListener("click", () => {
   window.location.href = "purchase.html";
@@ -29,9 +60,9 @@ home__cart.addEventListener("click", () => {
   window.location.href = "cart.html";
 });
 
-window.addEventListener("load", () => {
-  home__cartLength.innerText = cart.length;
-});
+// window.addEventListener("load", () => {
+//   home__cartLength.innerText = cart.length;
+// });
 
 // navbar End------------------------------------------------------------------------
 

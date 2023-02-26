@@ -43,10 +43,16 @@
       <h1>Signup Here</h1>
       <form id="signup__form">
         <input
+          id="signup__email"
+          type="email"
           required
-          id="signup__username"
+          placeholder="Enter your Email"
+        />
+        <input
+          required
+          id="signup__name"
           type="text"
-          placeholder="Enter a unique Username"
+          placeholder="Enter your Name"
         />
         <input
           required
@@ -56,16 +62,11 @@
         />
         <input
           required
-          id="signup__name"
-          type="text"
-          placeholder="Enter your Name"
+          id="signup__confirmPassword"
+          type="password"
+          placeholder="Confirm your Password"
         />
-        <input
-          id="signup__email"
-          type="email"
-          required
-          placeholder="Enter your Email"
-        />
+
         <input type="submit" />
       </form>
     </div>

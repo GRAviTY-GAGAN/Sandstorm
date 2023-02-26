@@ -9,7 +9,6 @@ let home__logo = document.getElementById("home__logo");
 let home__cartLength = document.getElementById("home__cartLength");
 let home__purchase = document.getElementById("home__purchase");
 let login__signup = document.getElementById("login__signup");
-// let home__login = document.getElementById("home__login");
 let home__logoutCont = document.getElementById("home__logoutCont");
 let home__logoutBtn = document.getElementById("home__logoutBtn");
 
@@ -87,6 +86,9 @@ function loginUser(email, password) {
       } else {
         alert(`Something went wrong!, please try again`);
       }
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 

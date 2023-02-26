@@ -170,6 +170,7 @@ orderplaceBtn.addEventListener("click", () => {
             JSON.stringify(deliveryLsdata)
           );
           console.log(res);
+          alert(`Hey ${currentUser} your order has been Successfully placed.`);
           // displayandShow(cart);
           window.location.href = "index.html";
         })

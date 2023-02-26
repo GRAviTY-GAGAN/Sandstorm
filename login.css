@@ -110,6 +110,40 @@
 }
 
 /* Navbar Ends------------------------------------------------------------------------- */
+#login__form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#login__loginFormCont>h1 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#login__loginFormCont {
+    border-radius: 5px;
+    width: 32%;
+    margin: 7rem auto;
+    padding: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+#login__form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: large;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+
+#login__form input:nth-of-type(3) {
+    color: white;
+    background-color: black;
+    font-weight: 500;
+}
+
 
 /* Footer Styles Starts------------------------------------------ */
 #adminAccess {

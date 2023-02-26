@@ -7,6 +7,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#admin__mainCont {
+    padding: 2rem;
+}
+
 
 #adminProductForm>label>input {
     width: 100%;

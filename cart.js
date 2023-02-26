@@ -4,8 +4,13 @@ let home__cart = document.getElementById("home__cart");
 let home__logo = document.getElementById("home__logo");
 let home__purchase = document.getElementById("home__purchase");
 let home__login = document.getElementById("home__login");
+let checkout = document.getElementById("checkout");
 let cart__userName = document.getElementById("cart__userName");
+
 let currentUser = localStorage.getItem("currentUser") || null;
+let baseURL = "http://localhost:3000";
+let currentUserId = localStorage.getItem("currentUserId") || null;
+let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 
 if (currentUser) {
   home__login.innerText = `Hi, ${currentUser}`;
@@ -35,6 +40,18 @@ home__cart.addEventListener("click", () => {
   window.location.href = "cart.html";
 });
 
+checkout.addEventListener("click", () => {
+  if (currentUser) {
+    if (cart.length > 0) {
+      window.location.href = "checkout.html";
+    } else {
+      alert("Please add items to the cart");
+    }
+  } else {
+    alert("Please login first");
+  }
+});
+
 // navbar End------------------------------------------------------------------------
 
 //start to append products..............................................
@@ -42,7 +59,7 @@ cartpagedatamain = document.getElementById("cartpagedatamain");
 imageofcart = document.getElementById("imageofcart");
 detailofcartpoducts = document.getElementById("detailofcartpoducts");
 let cartLength = document.getElementById("home__cartLength");
-let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
+
 let itemscount = document.getElementById("totalitemcount");
 
 cartLength.innerText = cart.length;
@@ -147,55 +164,50 @@ function displayandShow(cart) {
   cartTotal = totalpricesum;
 }
 
-let checkout = document.getElementById("checkout");
-let baseURL = "http://localhost:3000";
-let currentUserId = localStorage.getItem("currentUserId") || null;
+// checkout.addEventListener("click", () => {
+//   if (currentUser) {
+//     let userData;
+//     fetch(`${baseURL}/users/${currentUserId}`)
+//       .then((req) => req.json())
+//       .then((res) => {
+//         userData = res;
+//         // console.log(userData, "userData");
+//         updateUserData(userData);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+//     let date = moment().format("MMMM Do YYYY, h:mm:ss a");
+//     let orderDetails = {
+//       date: date,
+//       orderTotal: cartTotal,
+//       prducts: [...cart],
+//     };
 
-checkout.addEventListener("click", () => {
-  if (currentUser) {
-    let userData;
-    fetch(`${baseURL}/users/${currentUserId}`)
-      .then((req) => req.json())
-      .then((res) => {
-        userData = res;
-        // console.log(userData, "userData");
-        updateUserData(userData);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    let date = moment().format("MMMM Do YYYY, h:mm:ss a");
-    let orderDetails = {
-      date: date,
-      orderTotal: cartTotal,
-      prducts: [...cart],
-    };
+//     function updateUserData(data) {
+//       data.history.push(orderDetails);
+//       console.log(data, "data");
 
-    function updateUserData(data) {
-      data.history.push(orderDetails);
-      console.log(data, "data");
+//       fetch(`${baseURL}/users/${currentUserId}`, {
+//         method: "PATCH",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       })
+//         .then((req) => req.json())
+//         .then((res) => {
+//           cart = [];
+//           localStorage.setItem(currentUser, JSON.stringify(cart));
+//           console.log(res);
+//           displayandShow(cart);
+//         })
+//         .catch((err) => {
+//           console.log(err);
+//         });
+//     }
 
-      fetch(`${baseURL}/users/${currentUserId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((req) => req.json())
-        .then((res) => {
-          cart = [];
-          localStorage.setItem(currentUser, JSON.stringify(cart));
-          console.log(res);
-          displayandShow(cart);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-
-    // console.log("Yes", cartTotal, date);
-  } else {
-    alert("Please login first");
-  }
-});
+//   } else {
+//     alert("Please login first");
+//   }
+// });

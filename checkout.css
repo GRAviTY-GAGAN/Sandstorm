@@ -19,7 +19,7 @@ body {
 #nav>a:nth-child(2) img {
     padding-right: 20px;
     height: 30px;
-    
+
 }
 
 /* main section  */
@@ -141,7 +141,7 @@ h4 {
     padding: 15px;
 }
 
-#checkoutbtn>button{
+#checkoutbtn>button {
     width: 97%;
     display: flex;
     justify-content: space-around;
@@ -163,7 +163,7 @@ h4 {
     margin-bottom: 10px;
     margin: auto;
     margin-top: 8px;
-   
+
 }
 
 #buttomtext {
@@ -183,11 +183,11 @@ h4 {
     padding: 10px;
 }
 
-#orderbox>div:nth-child(1) {
+/* #orderbox>div:nth-child(1) {
     display: flex;
     justify-items: center;
 
-}
+} */
 
 
 #checkoutbtnrigth a {
@@ -302,11 +302,12 @@ h2 {
 
 /* payment */
 
-.payDetail{
-   
+.payDetail {
+
     padding: 10px;
 }
-.payDetail input{
+
+.payDetail input {
     /* border: 2px solid red; */
     margin-top: 5px;
     margin-bottom: 5px;
@@ -316,13 +317,14 @@ h2 {
     border: 2px solid grey;
 
 }
-#widthIncrease{
-      width: 59%;
+
+#widthIncrease {
+    width: 59%;
 }
 
 
 /* payment section css complete */
 
-form{
+form {
     margin-left: 10px;
 }

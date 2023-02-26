@@ -1,144 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detailform</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./checkout.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="100x100"
+      href="./LOGOS/Logo-7.png"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>detailform</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./checkout.css" />
-  <link rel="icon" type="image/png" sizes="100x100" href="./LOGOS/Logo-7.png" />
-</head>
-
-<body>
-  <nav>
-    <div id="nav">
-      <a href="./index.html"> <img src="./LOGOS/main-Logo.png" alt="Logos"></a>
-      <a href="./cart.html"> <img src="./LOGOS/icons8-shopping-bag-50.png" alt=""></a>
-    </div>
-  </nav>
-
-  <!-- main section  -->
-  <div id="main">
-    <div class="divleft">
-      <div id="securecheckout">
-        <img src="./LOGOS/icons8-unlock-private-50.png" alt="">
-        <span>
-          <h2>Secure Checkout</h2>
-        </span>
-        <span>
-          <h4>powered by Borderfree</h4>
-        </span>
-
-        <!-- <h4 id="English">English</h4> -->
-        <select name="" id="langselect">
-          <option value="">English</option>
-          <option value="">Hindi</option>
-          <option value="">spanish</option>
-        </select>
-
+  <body>
+    <nav>
+      <div id="nav">
+        <a href="./index.html">
+          <img src="./LOGOS/main-Logo.png" alt="Logos"
+        /></a>
+        <a href="./cart.html">
+          <img src="./LOGOS/icons8-shopping-bag-50.png" alt=""
+        /></a>
       </div>
-      <h4 id="BorderfreeAccount">Already have a Borderfree account?<span>Click here</span></h4>
-      <hr>
+    </nav>
 
-      <!-- delivery confirmation address section -->
-      <p id="dilivery">Delivery <a style="font-size: 15px; color: blue;" href="./checkout.html">(Edit)</a></p>
+    <!-- main section  -->
+    <div id="main">
+      <div class="divleft">
+        <div id="securecheckout">
+          <img src="./LOGOS/icons8-unlock-private-50.png" alt="" />
+          <span>
+            <h2>Secure Checkout</h2>
+          </span>
+          <span>
+            <h4>powered by Borderfree</h4>
+          </span>
 
-      <div id="deliverydeatil">
-        <div class="deliveryadderess" id="del-address">
-          <!-- append address here -->
+          <!-- <h4 id="English">English</h4> -->
+          <select name="" id="langselect">
+            <option value="">English</option>
+            <option value="">Hindi</option>
+            <option value="">spanish</option>
+          </select>
+        </div>
+        <h4 id="BorderfreeAccount">
+          Already have a Borderfree account?<span>Click here</span>
+        </h4>
+        <hr />
+
+        <!-- delivery confirmation address section -->
+        <p id="dilivery">
+          Delivery
+          <a style="font-size: 15px; color: blue" href="./checkout.html"
+            >(Edit)</a
+          >
+        </p>
+
+        <div id="deliverydeatil">
+          <div class="deliveryadderess" id="del-address">
+            <!-- append address here -->
+          </div>
+
+          <div class="diliverymethod" id="del-Method">
+            <!-- ?append address here -->
+          </div>
+        </div>
+        <hr />
+        <p id="dilivery">Payment</p>
+        <!-- payment detail section -->
+
+        <div class="payDetail">
+          <form>
+            <fieldset>
+              <legend><h3>Please Select Your Payment Method:</h3></legend>
+              <div>
+                <input
+                  type="radio"
+                  id="contactChoice1"
+                  name="contact"
+                  value="email"
+                />
+                <label for="contactChoice1">Credit card Or Debit card</label>
+              </div>
+              <div>
+                <input
+                  type="number"
+                  name=""
+                  id="widthIncrease"
+                  placeholder="Enter Your Card Number"
+                />
+              </div>
+              <div>
+                <input type="text" placeholder="Expiray Date" />
+                <input type="text" placeholder="CVV" />
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="contactChoice1"
+                  name="contact"
+                  value="email"
+                />
+                <label for="contactChoice1">UPI</label>
+              </div>
+              <div>
+                <input
+                  type="number"
+                  name=""
+                  id="widthIncrease"
+                  placeholder="1234567891@upi"
+                />
+              </div>
+            </fieldset>
+          </form>
+
+          <!-- payment detail section -->
         </div>
 
-        <div class="diliverymethod" id="del-Method">
-          <!-- ?append address here -->
+        <div id="checkoutbtn">
+          <button id="placeorderBtn">Place Order</button>
         </div>
+        <p>
+          This order total is 100% guaranteed. There will be no additional
+          charges due upon receipt.
+        </p>
+        <hr />
 
+        <!-- **************************************** -->
+
+        <p id="buttomtext">
+          By placing your order, you agree to the Terms & Conditions and Privacy
+          Policy of Boderfree, a Global-e company, Nordstrom’s international
+          fulfillment service. Borderfree is an online merchant that is located
+          at 200 West 41st Street, New York, NY 10036, US.
+        </p>
       </div>
-      <hr>
-      <p id="dilivery">Payment</p>
-      <!-- payment detail section -->
 
-      <div class="payDetail">
-        <form>
-          <fieldset>
-            <legend><h3>Please Select Your Payment Method:</h3></legend>
-            <div>
-              <input type="radio" id="contactChoice1" name="contact" value="email" />
-              <label for="contactChoice1">Credit card Or Debit card</label>
+      <!-- rigth box started -->
+      <div class="divright">
+        <div id="orderbox">
+          <div>
+            <i class="fa-solid fa-cart-shopping size"></i>
+            <h2>Your Order</h2>
+            <div id="detailForm__totalSection">
+              <p id="detailForm__totalSectionItem">
+                ITEM: <span id="detailForm__totalSectionItemValue"></span>
+              </p>
+              <p id="detailForm__totalSectionShip">
+                SHIPPING:
+                <span id="detailForm__totalSectionShipValue">₹599</span>
+              </p>
+              <p id="detailForm___totalSectionDuties">
+                DUTIES AND TAXES: ₹
+                <span id="detailForm__totalSectionDutiesValue">3097</span>
+              </p>
+              <p id="detailForm___totalSectionTotal">
+                TOTAL VALUE:
+                <span id="detailForm___totalSectionTotalValue"></span>
+              </p>
+              <!-- <p id="detailForm___"></p> -->
             </div>
-            <div><input type="number" name="" id="widthIncrease" placeholder="Enter Your Card Number"></div>
-            <div>
-              <input type="text" placeholder="Expiray Date">
-              <input type="text" placeholder="CVV">
-            </div>
-            <div>
-              <input type="radio" id="contactChoice1" name="contact" value="email" />
-              <label for="contactChoice1">UPI</label>
-            </div>
-            <div>
-              <input type="number" name="" id="widthIncrease" placeholder="1234567891@upi">
-            </div>
-            
-          </fieldset>
-        </form>
-      
-         <!-- payment detail section -->
-      </div>
-
-  
-      <div id="checkoutbtn">
-       
-        <button id="placeorderBtn">Place Order</button>
-      </div>
-      <p>This order total is 100% guaranteed. There will be no additional charges due upon receipt.</p>
-      <hr>
-
-      <!-- **************************************** -->
-
-      <p id="buttomtext">By placing your order, you agree to the Terms & Conditions and Privacy Policy of Boderfree, a
-        Global-e company, Nordstrom’s international fulfillment service. Borderfree is an online merchant that is
-        located at 200 West 41st Street, New York, NY 10036, US.</p>
-    </div>
-
-
-    <!-- rigth box started -->
-    <div class="divright">
-      <div id="orderbox">
-        <div>
-          <i class="fa-solid fa-cart-shopping  size"></i>
-          <h2>Your Order</h2>
+          </div>
+          <div id="checkoutbtnrigth">
+            <!-- <button>Continue</button> -->
+          </div>
+          <div id="cardToTalSection"></div>
         </div>
-        <div id="checkoutbtnrigth">
-          <!-- <button>Continue</button> -->
-        </div>
-        <div id="cardToTalSection">
-        
-        </div>
+        <hr />
 
-      </div>
-        <hr>
-
-        <div id="promocode">
-          Promo code
-        </div>
+        <div id="promocode">Promo code</div>
 
         <div id="promoapply">
           <input type="text" value=""" placeholder=" Enter Promo Code ">
           <button>Apply</button>
         </div>
-        <hr>
+        <hr />
         <div id="item">
           <!-- appending item here -->
         </div>
-
       </div>
     </div>
-  </div>
-  </div>
 
-  <script src="./detailform.js"></script>
-
+    <script src="./detailform.js"></script>
+    <script src="lib/moment/moment.min.js"></script>
+  </body>
 </html>

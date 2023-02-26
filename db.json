@@ -16,8 +16,26 @@
       "name": "GAGAN",
       "history": [
         {
-          "date": "February 26th 2023, 10:29:12 am",
-          "orderTotal": 16945,
+          "date": "February 26th 2023, 3:54:13 pm",
+          "orderTotal": 9535,
+          "prducts": [
+            {
+              "id": 1677005125488,
+              "image": "https://n.nordstrommedia.com/id/sr3/3b53dc7e-cc0f-4c80-8511-7d69079e49ad.jpeg?q=45&dpr=2&h=365.31&w=230",
+              "title": "Ponte Ankle Pants",
+              "description": "A nicely weighted ponte knit creates a sleek, stretchy fit for slim pants styled with a clean front and cut to a contemporary ankle length.",
+              "price": 2851,
+              "gender": "Women",
+              "category": "Bottom",
+              "rating": 4,
+              "size": "S",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "date": "February 26th 2023, 3:55:27 pm",
+          "orderTotal": 21933,
           "prducts": [
             {
               "id": 1676920218770,
@@ -32,13 +50,13 @@
               "qty": 1
             },
             {
-              "id": 1676919854916,
-              "image": "https://n.nordstrommedia.com/id/sr3/d0ea61e8-d726-4a07-9cb9-b52949a2ecaf.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
-              "title": "Madrid Big Buckle Slide Sandal",
-              "description": "An oversized buckle cinches the angled bridge strap of a sandal built on the legendary Birkenstock footbed for time-tested comfort and on-trend style.",
-              "price": 12486,
-              "gender": "Women",
-              "category": "Footware",
+              "id": 1677005529024,
+              "image": "https://n.nordstrommedia.com/id/sr3/8461b200-438a-4725-ac11-8a239d0bdd99.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Skinny Suit Jacket",
+              "description": "Stride through the office with confidence in this sleek sport coat made with notched lapels and designed for a slim, tapered fit.",
+              "price": 10790,
+              "gender": "Men",
+              "category": "Top",
               "rating": 5,
               "size": "M",
               "qty": 1

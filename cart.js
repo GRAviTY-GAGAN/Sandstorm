@@ -98,16 +98,16 @@ function displayandShow(cart) {
 
     increasequantity.addEventListener("click", () => {
       itemscount.innerText = ele.qty++;
-      localStorage.setItem("cart", JSON.stringify(cart));
-      cart = JSON.parse(localStorage.getItem("cart"));
+      localStorage.setItem(currentUser, JSON.stringify(cart));
+      cart = JSON.parse(localStorage.getItem(currentUser));
       displayandShow(cart);
     });
     decreasequantity.addEventListener("click", (e) => {
       if (ele.qty > 1) {
         itemscount.innerText = ele.qty--;
 
-        localStorage.setItem("cart", JSON.stringify(cart));
-        cart = JSON.parse(localStorage.getItem("cart"));
+        localStorage.setItem(currentUser, JSON.stringify(cart));
+        cart = JSON.parse(localStorage.getItem(currentUser));
         displayandShow(cart);
       }
     });
@@ -145,8 +145,8 @@ function displayandShow(cart) {
         return ele.id != element.id;
       });
 
-      localStorage.setItem("cart", JSON.stringify(filteredCart));
-      cart = JSON.parse(localStorage.getItem("cart"));
+      localStorage.setItem(currentUser, JSON.stringify(filteredCart));
+      cart = JSON.parse(localStorage.getItem(currentUser));
       cartLength.innerText = cart.length;
       itemscount.innerText = cart.length;
       displayandShow(filteredCart);

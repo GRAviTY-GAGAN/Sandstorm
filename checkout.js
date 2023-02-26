@@ -36,10 +36,7 @@ window.addEventListener("load", () => {
 });
 
 showCartItem(cart); //
-//totalSection(cartAddedProd,methodToggle)
-// totalSection(cartAddedProd, methodToggle)
 
-// getting the delivery input
 let promocode = document.getElementById("promocode");
 // getting contionue button
 let btnCheckout = document.getElementById("checkoutbtn");
@@ -83,56 +80,11 @@ function sendData() {
   );
   console.log(deliveryAddressObj, "ADEDED");
 }
-//***************************** */
 
-// function totalSection(cart, data) {
-//   var cardToTal_Section = document.getElementById("cardToTalSection");
-//   cardToTal_Section.innerHTML = null;
-
-//   data.forEach((ele) => {
-//     let div1 = document.createElement("div");
-//     div1.classList = "totalvalue";
-//     let p1 = document.createElement("p");
-//     p1.textContent = "ITEM";
-//     p2 = document.createElement("p");
-//     p2.textContent = sumItem(cart);
-
-//     let div2 = document.createElement("div");
-//     div2.classList = "totalvalue";
-//     let p3 = document.createElement("p");
-//     p3.textContent = "SHIPPING ";
-//     p4 = document.createElement("p");
-//     p4.textContent = `Rs. 599`;
-
-//     let div3 = document.createElement("div");
-//     div3.classList = "totalvalue";
-//     let p5 = document.createElement("p");
-//     p5.textContent = "DUTIES AND TAXES";
-//     p6 = document.createElement("p");
-//     p6.textContent = ele;
-
-//     let div4 = document.createElement("div");
-//     div4.classList = "totalvalue";
-//     let p7 = document.createElement("p");
-//     p7.textContent = "TOTAL VALUE";
-//     p8 = document.createElement("p");
-//     p8.textContent = calculatetotal(cart, data);
-
-//     div1.append(p1, p2);
-//     div2.append(p3, p4);
-//     div3.append(p5, p6);
-//     div4.append(p7, p8);
-
-//     cardToTal_Section.append(div1, div2, div3, div4);
-//   });
-// }
-
-// ***********************************
 // toggle the method value
 
 document.querySelectorAll('input[name="drone"]').forEach((elem) => {
   elem.addEventListener("change", function (event) {
-    // delMethod = event.target.value;
     taxes = event.target.value;
 
     checkout__totalSectionDutiesValue.innerText = event.target.value;

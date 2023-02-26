@@ -1,6 +1,6 @@
 let deliveryLsdata = JSON.parse(localStorage.getItem("deliveryAddress")) || [];
 let cartAddedProd = JSON.parse(localStorage.getItem("cart")) || [];
-// let methodToggle = JSON.parse(localStorage.getItem("method-toggle")) || ""
+
 let carttotal = JSON.parse(localStorage.getItem("totalcart")) || "";
 let texas = JSON.parse(localStorage.getItem("texes")) || "";
 let totalitem = JSON.parse(localStorage.getItem("totalitem")) || "";
@@ -26,7 +26,7 @@ detailForm___totalSectionTotalValue.innerText = totalDetails.total;
 let taxes = 3097;
 let shippingPrice = 599;
 let cartLength = cart.length;
-// checkout__totalSectionItemValue.innerText = cartLength;
+
 
 // totalSection(carttotal, texas, totalitem);
 
@@ -47,14 +47,6 @@ window.addEventListener("load", () => {
 methoddel(deliveryLsdata);
 ADDRESSDEATIL(deliveryLsdata);
 
-// orderplaceBtn.addEventListener("click", () => {
-//   alert("congratulation! User  Your Order is Placed Succefully,Visit Again");
-//   localStorage.setItem("purchsed", JSON.stringify(cartAddedProd));
-//   localStorage.removeItem("cart");
-//   localStorage.removeItem("deliveryAddress");
-//   window.location.href = "./index.html";
-// });
-
 function methoddel(data) {
   let delMehtod = document.getElementById("del-Method");
   delMehtod.innerHTML = null;
@@ -63,13 +55,13 @@ function methoddel(data) {
     methodName.textContent = "DELIVERY METHOD:";
 
     let delType = document.createElement("p");
-    delType.textContent = ele.method;
+    delType.textContent = ele.method.toUpperCase();
 
     let imp = document.createElement("p");
-    imp.textContent = ele.deliveryCharges;
+    imp.textContent = ele.deliveryCharges.toUpperCase();
 
     let day = document.createElement("p");
-    day.textContent = ele.deliveryTime;
+    day.textContent = ele.deliveryTime.toUpperCase();
 
     delMehtod.append(methodName, delType, imp, day);
   });
@@ -134,58 +126,6 @@ function showCartItem(data) {
     itemShow.append(divcard);
   });
 }
-
-// cart total section
-// function totalSection(carttotal, texas, totalitem) {
-//   var cardToTal_Section = document.getElementById("cardToTalSection");
-
-//   cardToTal_Section.innerHTML = null;
-
-//   let div1 = document.createElement("div");
-//   div1.classList = "totalvalue";
-//   let p1 = document.createElement("p");
-//   p1.textContent = "ITEM";
-//   p2 = document.createElement("p");
-//   p2.textContent = totalitem;
-
-//   let div2 = document.createElement("div");
-//   div2.classList = "totalvalue";
-//   let p3 = document.createElement("p");
-//   p3.textContent = "SHIPPING ";
-//   p4 = document.createElement("p");
-//   p4.textContent = `Rs. 599`;
-
-//   let div3 = document.createElement("div");
-//   div3.classList = "totalvalue";
-//   let p5 = document.createElement("p");
-//   p5.textContent = "DUTIES AND TAXES";
-//   p6 = document.createElement("p");
-//   p6.textContent = `RS. ${texas}`;
-
-//   let div4 = document.createElement("div");
-//   div4.classList = "totalvalue";
-//   let p7 = document.createElement("p");
-//   p7.textContent = "TOTAL VALUE";
-//   p8 = document.createElement("p");
-//   p8.textContent = ` RS.${carttotal}`;
-
-//   div1.append(p1, p2);
-//   div2.append(p3, p4);
-//   div3.append(p5, p6);
-//   div4.append(p7, p8);
-//   cardToTal_Section.append(div1, div2, div3, div4);
-// }
-
-// function calculatetotal() {
-//   let sum = 0;
-//   sum = cart.reduce((acc, item) => {
-//     return (acc += item.price * item.qty);
-//   }, sum);
-//   //   console.log(sum, "TOTAL");
-//   checkout___totalSectionTotalValue.innerText = "";
-//   checkout___totalSectionTotalValue.innerText =
-//     Number(sum) + Number(shippingPrice) + Number(taxes);
-// }
 
 orderplaceBtn.addEventListener("click", () => {
   if (currentUser) {

@@ -5,9 +5,33 @@ let home__logo = document.getElementById("home__logo");
 let home__purchase = document.getElementById("home__purchase");
 let home__login = document.getElementById("home__login");
 let checkout = document.getElementById("checkout");
+let currentUser = localStorage.getItem("currentUser") || null;
+
 let cart__userName = document.getElementById("cart__userName");
 
-let currentUser = localStorage.getItem("currentUser") || null;
+let home__logoutCont = document.getElementById("home__logoutCont");
+let home__logoutBtn = document.getElementById("home__logoutBtn");
+
+home__logoutBtn.addEventListener("click", () => {
+  if (currentUser) {
+    currentUser = null;
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("currentUserId");
+    alert("logged out Successfully!");
+    window.location.reload();
+  }
+});
+
+if (currentUser) {
+  home__login.addEventListener("mouseenter", () => {
+    home__logoutCont.style.display = "block";
+  });
+
+  home__nav.addEventListener("mouseleave", () => {
+    home__logoutCont.style.display = "none";
+  });
+}
+
 let baseURL = "http://localhost:3000";
 let currentUserId = localStorage.getItem("currentUserId") || null;
 let cart = JSON.parse(localStorage.getItem(currentUser)) || [];

@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
     .then((res) => {
       console.log(res.history);
       purchaseHistory = [...res.history];
-      updatePurchasePage();
+      updatePurchasePage(purchaseHistory);
     });
 });
 
@@ -24,8 +24,30 @@ let home__cartLength = document.getElementById("home__cartLength");
 let home__purchase = document.getElementById("home__purchase");
 let home__login = document.getElementById("home__login");
 let purchase__historyCont = document.getElementById("purchase__historyCont");
+let home__logoutCont = document.getElementById("home__logoutCont");
+let home__logoutBtn = document.getElementById("home__logoutBtn");
 
-function updatePurchasePage() {
+home__logoutBtn.addEventListener("click", () => {
+  if (currentUser) {
+    currentUser = null;
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("currentUserId");
+    alert("logged out Successfully!");
+    window.location.reload();
+  }
+});
+
+if (currentUser) {
+  home__login.addEventListener("mouseenter", () => {
+    home__logoutCont.style.display = "block";
+  });
+
+  home__nav.addEventListener("mouseleave", () => {
+    home__logoutCont.style.display = "none";
+  });
+}
+
+function updatePurchasePage(data) {
   if (purchaseHistory.length == 0) {
     purchase__historyCont.innerHTML = "";
     let notify = document.createElement("h2");
@@ -33,6 +55,62 @@ function updatePurchasePage() {
     notify.style.textAlign = "center";
     notify.style.fontWeight = "400";
     purchase__historyCont.append(notify);
+  } else {
+    purchase__historyCont.innerHTML = "";
+    data.forEach((element) => {
+      let historyCard = document.createElement("div");
+      historyCard.id = "purchase__historyCard";
+
+      let date = document.createElement("p");
+      date.id = "purchase__purchaseDate";
+      date.innerText = element.date;
+
+      let product = document.createElement("div");
+      product.id = "purchase__productCard";
+
+      element.prducts.forEach((item) => {
+        let productCard = document.createElement("div");
+        productCard.id = "purchase__productCardSubCont";
+
+        let imgCont = document.createElement("div");
+        imgCont.id = "purchase__productImgCont";
+        let img = document.createElement("img");
+        img.src = item.image;
+
+        imgCont.append(img);
+
+        let productDetailsCont = document.createElement("div");
+
+        let title = document.createElement("h3");
+        title.innerText = item.title;
+
+        let des = document.createElement("p");
+        des.innerText = item.description;
+
+        let gender = document.createElement("p");
+        gender.innerText = "Gender: " + item.gender;
+
+        let price = document.createElement("p");
+        price.innerText = "Price: ₹ " + item.price;
+
+        let qty = document.createElement("p");
+        qty.innerText = "Qty: " + item.qty;
+
+        let size = document.createElement("p");
+        size.innerText = "Size: " + item.size;
+
+        productDetailsCont.append(title, des, gender, size, price, qty);
+        productCard.append(imgCont, productDetailsCont);
+        product.append(productCard);
+      });
+
+      let total = document.createElement("p");
+      total.id = "purchase__purchaseTotal";
+      total.innerText = "Total: ₹" + element.orderTotal;
+
+      historyCard.append(date, product, total);
+      purchase__historyCont.append(historyCard);
+    });
   }
 }
 

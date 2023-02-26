@@ -102,6 +102,35 @@
     cursor: pointer;
 }
 
+#home__logoutCont {
+    position: absolute;
+    display: none;
+    top: 72px;
+    width: 220px;
+    text-align: center;
+    right: 90px;
+    background-color: white;
+    padding: 1rem;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+#home__linksCont>div {
+    cursor: pointer;
+}
+
+#home__logoutCont>h2 {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+
 /* Navbar Ends------------------------------------------------------------------------- */
 
 

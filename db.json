@@ -62,6 +62,36 @@
               "qty": 1
             }
           ]
+        },
+        {
+          "date": "February 26th 2023, 4:06:56 pm",
+          "orderTotal": 21504,
+          "prducts": [
+            {
+              "id": 1677006053559,
+              "image": "https://n.nordstrommedia.com/id/sr3/3998f1f0-fca5-405c-83d1-366facfe71e5.jpeg?h=365&w=240&dpr=2",
+              "title": "Sleeveless Twill Blazer",
+              "description": "This tactile twill blazer is designed in a sleeveless silhouette with flap pockets and a tailored one-button fit.",
+              "price": 6820,
+              "gender": "Men",
+              "category": "Top",
+              "rating": 4,
+              "size": "M",
+              "qty": 1
+            },
+            {
+              "id": 1677221514635,
+              "image": "https://n.nordstrommedia.com/id/sr3/496f6352-6d64-4a41-aeee-46d49cebe8c7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Classic Fit Bomber Jacket",
+              "description": "Sport an iconic athletic look in this bright-blue bomber jacket featuring minimalist styling and all the classic details.",
+              "price": 8000,
+              "gender": "Men",
+              "category": "Top",
+              "rating": 3,
+              "size": "M",
+              "qty": 1
+            }
+          ]
         }
       ]
     },

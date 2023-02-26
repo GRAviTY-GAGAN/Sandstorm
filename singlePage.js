@@ -3,6 +3,28 @@ let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 let cartLength = document.getElementById("home__cartLength");
 cartLength.innerText = cart.length;
 let home__login = document.getElementById("home__login");
+let home__logoutCont = document.getElementById("home__logoutCont");
+let home__logoutBtn = document.getElementById("home__logoutBtn");
+
+home__logoutBtn.addEventListener("click", () => {
+  if (currentUser) {
+    currentUser = null;
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("currentUserId");
+    alert("logged out Successfully!");
+    window.location.reload();
+  }
+});
+
+if (currentUser) {
+  home__login.addEventListener("mouseenter", () => {
+    home__logoutCont.style.display = "block";
+  });
+
+  home__nav.addEventListener("mouseleave", () => {
+    home__logoutCont.style.display = "none";
+  });
+}
 
 if (currentUser) {
   home__login.innerText = `Hi, ${currentUser}`;

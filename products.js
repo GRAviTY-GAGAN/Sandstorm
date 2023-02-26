@@ -110,6 +110,28 @@ let home__logo = document.getElementById("home__logo");
 let home__cartLength = document.getElementById("home__cartLength");
 let home__search = document.getElementById("home__search");
 let home__purchase = document.getElementById("home__purchase");
+let home__logoutCont = document.getElementById("home__logoutCont");
+let home__logoutBtn = document.getElementById("home__logoutBtn");
+
+home__logoutBtn.addEventListener("click", () => {
+  if (currentUser) {
+    currentUser = null;
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("currentUserId");
+    alert("logged out Successfully!");
+    window.location.reload();
+  }
+});
+
+if (currentUser) {
+  home__login.addEventListener("mouseenter", () => {
+    home__logoutCont.style.display = "block";
+  });
+
+  home__nav.addEventListener("mouseleave", () => {
+    home__logoutCont.style.display = "none";
+  });
+}
 
 home__purchase.addEventListener("click", () => {
   window.location.href = "purchase.html";

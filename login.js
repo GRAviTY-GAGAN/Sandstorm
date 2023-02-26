@@ -1,6 +1,6 @@
 let baseURL = "http://localhost:3000";
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let currentUser = localStorage.getItem("currentUser") || null;
+let currentUser = JSON.parse(localStorage.getItem("currentUser") || null);
 
 // navbar start-------------------------------------------------------------------
 let home__searchBar = document.getElementById("home__searchBar");
@@ -9,7 +9,28 @@ let home__logo = document.getElementById("home__logo");
 let home__cartLength = document.getElementById("home__cartLength");
 let home__purchase = document.getElementById("home__purchase");
 let login__signup = document.getElementById("login__signup");
+// let home__login = document.getElementById("home__login");
+let home__logoutCont = document.getElementById("home__logoutCont");
+let home__logoutBtn = document.getElementById("home__logoutBtn");
 
+home__logoutBtn.addEventListener("click", () => {
+  if (currentUser) {
+    currentUser = null;
+    localStorage.setItem("currentUser", null);
+    localStorage.setItem("currentUserId", null);
+    alert("logged out Successfully!");
+  }
+});
+
+if (currentUser) {
+  login__signup.addEventListener("mouseenter", () => {
+    home__logoutCont.style.display = "block";
+  });
+
+  home__nav.addEventListener("mouseleave", () => {
+    home__logoutCont.style.display = "none";
+  });
+}
 if (currentUser) {
   login__signup.innerText = `Hi, ${currentUser}`;
 } else {

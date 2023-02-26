@@ -1,9 +1,10 @@
-let deliveryLsdata = JSON.parse(localStorage.getItem("deliveryAddress")) || {}
+let deliveryLsdata = JSON.parse(localStorage.getItem("deliveryAddress")) || []
 let cartAddedProd = JSON.parse(localStorage.getItem("cart")) || []
 // let methodToggle = JSON.parse(localStorage.getItem("method-toggle")) || ""
 let carttotal = JSON.parse(localStorage.getItem("totalcart")) || ""
 let texas = JSON.parse(localStorage.getItem("texes")) || ""
 let totalitem = JSON.parse(localStorage.getItem("totalitem")) || ""
+ 
 
 totalSection(carttotal, texas, totalitem)
 showCartItem(cartAddedProd)
@@ -11,13 +12,15 @@ showCartItem(cartAddedProd)
 methoddel(deliveryLsdata)
 ADDRESSDEATIL(deliveryLsdata)
 
+
 let orderplaceBtn = document.getElementById("placeorderBtn")
 orderplaceBtn.addEventListener("click", () => {
 
-    alert("congratulation!  , Your Order is Placed succefully,VisitAgain")
+    alert("congratulation! User  Your Order is Placed Succefully,Visit Again")
     localStorage.setItem("purchsed", JSON.stringify(cartAddedProd))
     localStorage.removeItem("cart")
     localStorage.removeItem("deliveryAddress")
+    window.location.href="./index.html"
 })
 
 function methoddel(data) {
@@ -89,6 +92,7 @@ function ADDRESSDEATIL(data) {
     })
 
 }
+
 function showCartItem(data) {
 
     let itemShow = document.querySelector("#item")
@@ -103,7 +107,7 @@ function showCartItem(data) {
         image.src = ele.image
 
         let desc = document.createElement("p")
-        desc.textContent = ele.description.substring(20, 0)
+        desc.textContent = ele.description.substring(50, 0)
 
         let title = document.createElement("h3")
         title.textContent = ele.title
@@ -115,7 +119,7 @@ function showCartItem(data) {
         cate.textContent = ele.category
 
         let size = document.createElement("p")
-        size.textContent = ele.size
+        size.textContent = `Size :${ele.size}`
 
         let ratting = document.createElement("h4")
         ratting.textContent = ` Rating ${ele.rating}`

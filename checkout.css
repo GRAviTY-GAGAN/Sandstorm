@@ -141,7 +141,7 @@ h4 {
     padding: 15px;
 }
 
-#checkoutbtn a {
+#checkoutbtn>button{
     width: 97%;
     display: flex;
     justify-content: space-around;
@@ -161,6 +161,9 @@ h4 {
     font-size: 15px;
     border-radius: 5px;
     margin-bottom: 10px;
+    margin: auto;
+    margin-top: 8px;
+   
 }
 
 #buttomtext {
@@ -185,10 +188,7 @@ h4 {
     justify-items: center;
 
 }
-.size {
-    
 
-}
 
 #checkoutbtnrigth a {
     width: 97%;
@@ -302,4 +302,27 @@ h2 {
 
 /* payment */
 
+.payDetail{
+   
+    padding: 10px;
+}
+.payDetail input{
+    /* border: 2px solid red; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid grey;
 
+}
+#widthIncrease{
+      width: 59%;
+}
+
+
+/* payment section css complete */
+
+form{
+    margin-left: 10px;
+}

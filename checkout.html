@@ -83,62 +83,69 @@
         <h4>Shipping Cost</h4>
       </div>
 
+      <form>
+        <fieldset>
+          <legend><h4>Please Select Your Delivery Method:</h4></legend>
+          <div class="shipingoption">
+            <input type="radio" id="standard-1" name="drone" value="3097" >
+            <div>
+              Standard
+              <div>
+                No additional import charges at
+                delivery
+              </div>
+            </div>
+            <div>11–21 business days</div>
+            <div>(INR) ₹3097</div>
+          </div>
+    
+          <div class="shipingoption">
+            <input type="radio" id="standard-2" name="drone" value="3098">
+            <div>
+              Standard
+              <div>
+                Import charges collected upon delivery
+              </div>
+            </div>
+            <div>11–21 business days</div>
+            <div>(INR) ₹3,098</div>
+    
+          </div>
+    
+          <div class="shipingoption">
+            <input type="radio" id="express-1" name="drone" value="5085">
+            <div>
+              Express
+              <div>
+                No additional import charges at
+                delivery
+              </div>
+            </div>
+            <div>06-11 business days</div>
+            <div>(INR) ₹5085</div>
+          </div>
+    
+          <div class="shipingoption">
+            <input type="radio" id="express-2" name="drone" value="6085">
+            <div>
+              Standard
+              <div>
+                Import charges collected upon delivery
+              </div>
+            </div>
+            <div>06-11 business days</div>
+            <div>(INR) ₹6085</div>
+    
+          </div>
+    
+          
+        </fieldset>
+      </form>
+    
       <!-- data section  -->
-      <div class="shipingoption">
-        <input type="radio" id="standard-1" name="drone" value="3097" >
-        <div>
-          Standard
-          <div>
-            No additional import charges at
-            delivery
-          </div>
-        </div>
-        <div>11–21 business days</div>
-        <div>(INR) ₹3097</div>
-      </div>
-
-      <div class="shipingoption">
-        <input type="radio" id="standard-2" name="drone" value="3098">
-        <div>
-          Standard
-          <div>
-            Import charges collected upon delivery
-          </div>
-        </div>
-        <div>11–21 business days</div>
-        <div>(INR) ₹3,098</div>
-
-      </div>
-
-      <div class="shipingoption">
-        <input type="radio" id="express-1" name="drone" value="5085">
-        <div>
-          Express
-          <div>
-            No additional import charges at
-            delivery
-          </div>
-        </div>
-        <div>06-11 business days</div>
-        <div>(INR) ₹5085</div>
-      </div>
-
-      <div class="shipingoption">
-        <input type="radio" id="express-2" name="drone" value="6085">
-        <div>
-          Standard
-          <div>
-            Import charges collected upon delivery
-          </div>
-        </div>
-        <div>06-11 business days</div>
-        <div>(INR) ₹6085</div>
-
-      </div>
-
+      
       <div id="checkoutbtn">
-        <!-- <button>Continue</button> -->
-        <a href="#" ><button id="btnCheckout">Continue</button></a>
+        <button id="btnCheckout">Continue</button>
       </div>
 
       <hr>
@@ -158,11 +165,6 @@
           <i class="fa-solid fa-cart-shopping  size"></i>
           <h2>Your Order</h2>
         </div>
-
-        <!-- <div id="checkoutbtnrigth">
-         
-          <a href="./detailform.html"><button>Continue</button></a>
-        </div> -->
 
         <!-- total section -->
       <div id="cardToTalSection">

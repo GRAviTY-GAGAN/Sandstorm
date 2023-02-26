@@ -59,14 +59,39 @@
       </div>
       <hr>
       <p id="dilivery">Payment</p>
+      <!-- payment detail section -->
 
       <div class="payDetail">
+        <form>
+          <fieldset>
+            <legend><h3>Please Select Your Payment Method:</h3></legend>
+            <div>
+              <input type="radio" id="contactChoice1" name="contact" value="email" />
+              <label for="contactChoice1">Credit card Or Debit card</label>
+            </div>
+            <div><input type="number" name="" id="widthIncrease" placeholder="Enter Your Card Number"></div>
+            <div>
+              <input type="text" placeholder="Expiray Date">
+              <input type="text" placeholder="CVV">
+            </div>
+            <div>
+              <input type="radio" id="contactChoice1" name="contact" value="email" />
+              <label for="contactChoice1">UPI</label>
+            </div>
+            <div>
+              <input type="number" name="" id="widthIncrease" placeholder="1234567891@upi">
+            </div>
+            
+          </fieldset>
+        </form>
+      
+         <!-- payment detail section -->
       </div>
 
-      <hr>
+  
       <div id="checkoutbtn">
-        <!-- <button>Place Order</button> -->
-        <a href="./index.html"><button id="placeorderBtn">Place Order</button></a>
+       
+        <button id="placeorderBtn">Place Order</button>
       </div>
       <p>This order total is 100% guaranteed. There will be no additional charges due upon receipt.</p>
       <hr>

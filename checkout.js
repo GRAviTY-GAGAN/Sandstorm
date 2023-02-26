@@ -7,7 +7,7 @@ let methodToggle = JSON.parse(localStorage.getItem("method-toggle")) || ""
 
 showCartItem(cartAddedProd)//
 //totalSection(cartAddedProd,methodToggle)
-totalSection(cartAddedProd, methodToggle)
+// totalSection(cartAddedProd, methodToggle)
 
 // getting the delivery input
 let promocode = document.getElementById("promocode")
@@ -18,8 +18,25 @@ let btnCheckout = document.getElementById("checkoutbtn")
 btnCheckout.addEventListener("click", (e) => {
     e.preventDefault()
     sendData()
-    window.location.href = "detailform.html"
+    alert("Your Detail is Saved Succesfully")
+    window.location.href = "./detailform.html"
 })
+function sendData() {
+    let deliveryAddressObj = {
+        email: document.getElementById("email").value,
+        fname: document.getElementById("fname").value,
+        lname: document.getElementById("lname").value,
+        address: document.getElementById("address").value,
+        address2: document.getElementById("address2").value,
+        postal: document.getElementById("Postalcode").value,
+        city: document.getElementById("city").value,
+        state: document.getElementById("state").value,
+        phone: document.getElementById("phone").value,
+        location: document.getElementById("location").value,
+        method: delMethod
+    }
+    window.localStorage.setItem("deliveryAddress", JSON.stringify([deliveryAddressObj]))
+}
 //***************************** */
 
 
@@ -68,40 +85,20 @@ function totalSection(cartAddedProd, data) {
 
 
 // ***********************************
-function sendData() {
-    let deliveryAddressObj = {
-        email: document.getElementById("email").value,
-        fname: document.getElementById("fname").value,
-        lname: document.getElementById("lname").value,
-        address: document.getElementById("address").value,
-        address2: document.getElementById("address2").value,
-        postal: document.getElementById("Postalcode").value,
-        city: document.getElementById("city").value,
-        state: document.getElementById("state").value,
-        phone: document.getElementById("phone").value,
-        location: document.getElementById("location").value,
-        method: delMethod
-    }
-    window.localStorage.setItem("deliveryAddress", JSON.stringify([deliveryAddressObj]))
-}
-
 // toggle the method value
-if (document.querySelector('input[name="drone"]')) {
+
     document.querySelectorAll('input[name="drone"]').forEach((elem) => {
         elem.addEventListener("change", function (event) {
 
             delMethod = event.target.value;
+            console.log(delMethod)
+        
             window.localStorage.setItem("method-toggle", JSON.stringify([delMethod]))
             window.localStorage.setItem("texes", JSON.stringify(delMethod))
 
-            // cartTotal(cartAddedProd, methodToggle)
-
             totalSection(cartAddedProd, methodToggle)
-
-
         });
     });
-}
 
 // appending the cartdadded product
 function showCartItem(data) {
@@ -133,8 +130,10 @@ function showCartItem(data) {
 
         let ratting = document.createElement("h4")
         ratting.textContent = ` Rating ${ele.rating}`
+        let size = document.createElement("p")
+        size.textContent = `Size :${ele.size}`
 
-        divCont.append(title, desc, gender, price, ratting)
+        divCont.append(title, desc, gender, price, ratting,size)
         divcard.append(image, divCont)
         // console.log(divcard)
 
@@ -143,12 +142,14 @@ function showCartItem(data) {
 
 }
 
-function calculatetotal(data, methodV) {
+
+
+function calculatetotal(data,texas) {
     let sum = 0
     for (let i = 0; i < data.length; i++) {
         sum += data[i].price * data[i].qty
     }
-    let total = sum + 599 + (+methodV)
+    let total = sum + 599 + (+texas)
     localStorage.setItem("totalcart", JSON.stringify(total))
     return total
 

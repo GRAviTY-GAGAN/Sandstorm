@@ -6,7 +6,8 @@ let adminFormUsername = document.getElementById("adminFormUsername");
 let adminFormPassword = document.getElementById("adminFormPassword");
 
 let baseURL = "http://localhost:3000";
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let currentUser = localStorage.getItem("currentUser") || null;
+let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 
 // navbar start-------------------------------------------------------------------
 let home__searchBar = document.getElementById("home__searchBar");
@@ -16,9 +17,13 @@ let home__cartLength = document.getElementById("home__cartLength");
 let home__purchase = document.getElementById("home__purchase");
 let home__login = document.getElementById("home__login");
 
-home__login.addEventListener("click", () => {
-  window.location.href = "login.html";
-});
+if (currentUser) {
+  home__login.innerText = `Hi, ${currentUser}`;
+} else {
+  home__login.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+}
 
 home__purchase.addEventListener("click", () => {
   window.location.href = "purchase.html";

@@ -11,12 +11,47 @@
   ],
   "users": [
     {
-      "id": "GRAviTY",
+      "id": "gaganbn1999@gmail.com",
       "pass": "1234",
       "name": "GAGAN",
-      "email": "gaganbn1999@gmail.com",
-      "history": [],
-      "cart": []
+      "history": [
+        {
+          "date": "February 26th 2023, 10:29:12 am",
+          "orderTotal": 16945,
+          "prducts": [
+            {
+              "id": 1676920218770,
+              "image": "https://n.nordstrommedia.com/id/sr3/285f13d7-39ac-482e-81ad-0615cab19cf6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Long Sleeve Pocket T-Shirt",
+              "description": "Smart logo embroidery elevates a versatile T-shirt shaped from soft, heavyweight cotton.",
+              "price": 4459,
+              "gender": "Men",
+              "category": "Top",
+              "rating": 4,
+              "size": "M",
+              "qty": 1
+            },
+            {
+              "id": 1676919854916,
+              "image": "https://n.nordstrommedia.com/id/sr3/d0ea61e8-d726-4a07-9cb9-b52949a2ecaf.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+              "title": "Madrid Big Buckle Slide Sandal",
+              "description": "An oversized buckle cinches the angled bridge strap of a sandal built on the legendary Birkenstock footbed for time-tested comfort and on-trend style.",
+              "price": 12486,
+              "gender": "Women",
+              "category": "Footware",
+              "rating": 5,
+              "size": "M",
+              "qty": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test123@gmail.com",
+      "pass": "1234",
+      "name": "tester1",
+      "history": []
     }
   ],
   "products": [
@@ -859,6 +894,14 @@
       "gender": "Girl",
       "category": "Dress",
       "rating": 3
+    }
+  ],
+  "existingUsers": [
+    {
+      "id": "gaganbn1999@gmail.com"
+    },
+    {
+      "id": "test123@gmail.com"
     }
   ]
 }

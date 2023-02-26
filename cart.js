@@ -4,10 +4,20 @@ let home__cart = document.getElementById("home__cart");
 let home__logo = document.getElementById("home__logo");
 let home__purchase = document.getElementById("home__purchase");
 let home__login = document.getElementById("home__login");
+let cart__userName = document.getElementById("cart__userName");
+let currentUser = localStorage.getItem("currentUser") || null;
 
-home__login.addEventListener("click", () => {
-  window.location.href = "login.html";
-});
+if (currentUser) {
+  home__login.innerText = `Hi, ${currentUser}`;
+  cart__userName.innerText = `To ${currentUser}'s address`;
+  cart__userName.style.wordSpacing = "6px";
+} else {
+  cart__userName.innerText = `To user address`;
+
+  home__login.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+}
 
 home__purchase.addEventListener("click", () => {
   window.location.href = "purchase.html";
@@ -32,11 +42,13 @@ cartpagedatamain = document.getElementById("cartpagedatamain");
 imageofcart = document.getElementById("imageofcart");
 detailofcartpoducts = document.getElementById("detailofcartpoducts");
 let cartLength = document.getElementById("home__cartLength");
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 let itemscount = document.getElementById("totalitemcount");
 
 cartLength.innerText = cart.length;
 itemscount.innerText = cart.length;
+
+let cartTotal = 0;
 
 displayandShow(cart);
 
@@ -72,19 +84,14 @@ function displayandShow(cart) {
       localStorage.setItem("cart", JSON.stringify(cart));
       cart = JSON.parse(localStorage.getItem("cart"));
       displayandShow(cart);
-
-    
     });
     decreasequantity.addEventListener("click", (e) => {
-   
-     
       if (ele.qty > 1) {
         itemscount.innerText = ele.qty--;
 
         localStorage.setItem("cart", JSON.stringify(cart));
         cart = JSON.parse(localStorage.getItem("cart"));
         displayandShow(cart);
-  
       }
     });
 
@@ -108,9 +115,9 @@ function displayandShow(cart) {
     let price = document.createElement("h1");
     price.innerText = "INR " + ele.price;
 
-    let size= document.createElement("p")
-    size.id = 'cart__productSize';
-    size.innerText="Size: "+ ele.size;
+    let size = document.createElement("p");
+    size.id = "cart__productSize";
+    size.innerText = "Size: " + ele.size;
 
     let remove = document.createElement("button");
     remove.classList = "span";
@@ -127,7 +134,7 @@ function displayandShow(cart) {
       itemscount.innerText = cart.length;
       displayandShow(filteredCart);
     });
-    productDetailsCont.append(tiltle, description, rating, price,size, remove);
+    productDetailsCont.append(tiltle, description, rating, price, size, remove);
     cardMainCont.append(imageCont, productDetailsCont);
     cartpagedatamain.append(cardMainCont);
   });
@@ -137,4 +144,58 @@ function displayandShow(cart) {
     totalpricesum += cart[i].price * cart[i].qty;
   }
   totalprice.textContent = "₹ " + totalpricesum;
+  cartTotal = totalpricesum;
 }
+
+let checkout = document.getElementById("checkout");
+let baseURL = "http://localhost:3000";
+let currentUserId = localStorage.getItem("currentUserId") || null;
+
+checkout.addEventListener("click", () => {
+  if (currentUser) {
+    let userData;
+    fetch(`${baseURL}/users/${currentUserId}`)
+      .then((req) => req.json())
+      .then((res) => {
+        userData = res;
+        // console.log(userData, "userData");
+        updateUserData(userData);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    let date = moment().format("MMMM Do YYYY, h:mm:ss a");
+    let orderDetails = {
+      date: date,
+      orderTotal: cartTotal,
+      prducts: [...cart],
+    };
+
+    function updateUserData(data) {
+      data.history.push(orderDetails);
+      console.log(data, "data");
+
+      fetch(`${baseURL}/users/${currentUserId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((req) => req.json())
+        .then((res) => {
+          cart = [];
+          localStorage.setItem(currentUser, JSON.stringify(cart));
+          console.log(res);
+          displayandShow(cart);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+
+    // console.log("Yes", cartTotal, date);
+  } else {
+    alert("Please login first");
+  }
+});

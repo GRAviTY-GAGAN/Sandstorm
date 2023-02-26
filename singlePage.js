@@ -1,7 +1,16 @@
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let currentUser = localStorage.getItem("currentUser") || null;
+let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 let cartLength = document.getElementById("home__cartLength");
 cartLength.innerText = cart.length;
+let home__login = document.getElementById("home__login");
+
+if (currentUser) {
+  home__login.innerText = `Hi, ${currentUser}`;
+} else {
+  home__login.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+}
 
 let arr = JSON.parse(localStorage.getItem("productDetails")) || [];
 
@@ -10,8 +19,6 @@ window.addEventListener("load", () => {
   cartLength.innerText = cart.length;
   check(arr);
 });
-
-
 
 let api = "https://nordstorm-db-json.onrender.com/products";
 
@@ -29,13 +36,9 @@ home__searchBar.addEventListener("click", () => {
 let left = document.getElementById("left");
 let right = document.getElementById("right");
 
-
 function check(data) {
-  
   singlePageProductDetailsMainDiv.innerHTML = "";
   data.forEach((element) => {
-    
-
     let img = document.createElement("img");
     img.src = element.image;
     let p = document.createElement("h1");
@@ -58,7 +61,6 @@ function check(data) {
     add.addEventListener("click", (e) => {
       e.preventDefault();
       Cart1(element);
-    
     });
 
     let select = document.createElement("select");
@@ -86,7 +88,6 @@ function check(data) {
 }
 
 function Cart1(para) {
-  
   let falg = false;
 
   falg = cart.some((item) => {
@@ -107,7 +108,7 @@ function Cart1(para) {
     para.qty = 1;
     cart.push(para);
     alert("Product added to Bag");
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem(currentUser, JSON.stringify(cart));
     cartLength.innerText = cart.length;
   }
 }

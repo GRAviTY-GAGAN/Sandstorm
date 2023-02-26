@@ -8,17 +8,14 @@
 }
 
 :root {
-    --gray: #b3b3b3
+    --gray: #B3B3B3
 }
-
 
 #home__mainCont {
     padding: 0 2rem;
 }
 
-
 /* Navbar starts------------------------------------------------------------------- */
-
 #home__cart {
     font-size: larger;
     position: relative;
@@ -55,7 +52,6 @@
 #home__searchBar {
     display: flex;
     align-items: center;
-
 }
 
 #home__searchBarCont {
@@ -82,6 +78,54 @@
 }
 
 /* Navbar Ends------------------------------------------------------------------------- */
+#login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login {
+    text-align: center;
+    margin-top: 2%;
+    font-weight: 100px;
+    font-size: 30px;
+    margin-right: 16%;
+}
+
+#login__form input:nth-child(1) {
+    margin: 0.8rem 0;
+    padding: .5rem;
+    outline: none;
+    font-size: large;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgb(241, 223, 223);
+    border: none;
+    width: 25%;;
+}
+
+#login__form input:nth-child(2) {
+    margin: 0.8rem 0;
+    padding: .5rem;
+    outline: none;
+    font-size: large;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgb(241, 223, 223);
+    border: none;
+    width: 25%;
+}
+
+#login__form input:nth-child(3) {
+    margin: 0.8rem 0;
+    width: 11.5%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 28px;
+    border-radius: 5px;
+    width: 25%;
+    padding: .3rem;
+}
 
 /* Footer Styles Starts------------------------------------------ */
 #adminAccess {
@@ -148,7 +192,7 @@
 }
 
 #home__footer {
-    background-color: #f6f9ff;
+    background-color: #F6F9FF;
     padding: 2rem;
 }
 
@@ -193,7 +237,4 @@
     border: 1px solid black;
     border-radius: 50%;
     margin-right: 0.5rem;
-
 }
-
-/* Footer Styles Ends------------------------------------------ */

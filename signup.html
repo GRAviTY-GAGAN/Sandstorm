@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SANDSTORM</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./feviconr.jpeg" />
-
     <link rel="stylesheet" href="signup.css" />
     <!-- just use the below tag to get font awesome -->
     <link
@@ -40,13 +39,19 @@
         </div>
       </nav>
       <!-- NAVBAR- Ends------------------------------------------ -->
-      <h1>Signup Here</h1>
+      <h1 id="signup">Signup</h1>
       <form id="signup__form">
         <input
+          id="signup__email"
+          type="email"
           required
-          id="signup__username"
+          placeholder="Enter your Email"
+        />
+        <input
+          required
+          id="signup__name"
           type="text"
-          placeholder="Enter a unique Username"
+          placeholder="Enter your Name"
         />
         <input
           required
@@ -56,18 +61,14 @@
         />
         <input
           required
-          id="signup__name"
-          type="text"
-          placeholder="Enter your Name"
-        />
-        <input
-          id="signup__email"
-          type="email"
-          required
-          placeholder="Enter your Email"
+          id="signup__confirmPassword"
+          type="password"
+          placeholder="Confirm your Password"
         />
         <input type="submit" />
       </form>
+      <h1 id="alreadylogin">Already have an Account? <a href="./login.html"><span style="color: brown; cursor: pointer;">
+            Login!</span></a></h1>
     </div>
   </body>
 </html>

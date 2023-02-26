@@ -1,63 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SANDSTORM</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./feviconr.jpeg" />
 
-    <link rel="stylesheet" href="login.css" />
-    <!-- just use the below tag to get font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- just use the above tag to get font awesome -->
-    <script src="login.js" defer></script>
-  </head>
-  <body>
-    <div id="home__mainCont">
-      <!-- NAVBAR------------------------------------------- -->
-      <nav id="home__nav">
-        <div id="home__logo"><h1>SANDSTORM</h1></div>
-        <div id="home__searchBarCont">
-          <div id="home__searchBar">
-            <i class="fa-solid fa-magnifying-glass"></i
-            ><input type="text" placeholder="Search for Products" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANDSTORM</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./feviconr.jpeg" />
+  <link rel="stylesheet" href="login.css" />
+  <!-- just use the below tag to get font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- just use the above tag to get font awesome -->
+  <script src="login.js" defer></script>
+</head>
+
+<body>
+  <div id="home__mainCont">
+    <!-- NAVBAR------------------------------------------- -->
+    <nav id="home__nav">
+      <div id="home__logo">
+        <h1>SANDSTORM</h1>
+      </div>
+      <div id="home__searchBarCont">
+        <div id="home__searchBar">
+          <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search for Products" />
         </div>
-        <div id="home__linksCont">
-          <div id="login__signup">Signup</div>
-          <div id="home__purchase">Purchases</div>
-          <div id="home__cart">
-            <div id="home__cartLength">0</div>
-            <i class="fa-solid fa-cart-arrow-down"></i>
-          </div>
+      </div>
+      <div id="home__linksCont">
+        <div id="login__signup">Signup</div>
+        <div id="home__purchase">Purchases</div>
+        <div id="home__cart">
+          <div id="home__cartLength">0</div>
+          <i class="fa-solid fa-cart-arrow-down"></i>
         </div>
-      </nav>
-      <!-- NAVBAR- Ends------------------------------------------ -->
+      </div>
+    </nav>
+    <!-- NAVBAR- Ends------------------------------------------ -->
+    <h1 id="login">Login</h1>
+    <form id="login__form">
+      <input required id="login__email" type="email" placeholder="Enter your Email" />
+      <input required id="login__password" type="password" placeholder="Enter your Password" />
+      <input type="submit" />
+    </form>
+  </div>
+</body>
 
-      <h1>Login Here</h1>
-
-      <form id="login__form">
-        <input
-          required
-          id="login__username"
-          type="text"
-          placeholder="Enter your Unique Username"
-        />
-        <input
-          required
-          id="login__password"
-          type="password"
-          placeholder="Enter your Password"
-        />
-        <input type="submit" />
-      </form>
-    </div>
-  </body>
 </html>

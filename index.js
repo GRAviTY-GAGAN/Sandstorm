@@ -4,6 +4,7 @@ let adminLoginForm = document.getElementById("adminLoginForm");
 let adminFormClose = document.getElementById("adminFormClose");
 let adminFormUsername = document.getElementById("adminFormUsername");
 let adminFormPassword = document.getElementById("adminFormPassword");
+let home__nav = document.getElementById("home__nav");
 
 let baseURL = "http://localhost:3000";
 let currentUser = localStorage.getItem("currentUser") || null;
@@ -16,6 +17,28 @@ let home__logo = document.getElementById("home__logo");
 let home__cartLength = document.getElementById("home__cartLength");
 let home__purchase = document.getElementById("home__purchase");
 let home__login = document.getElementById("home__login");
+let home__logoutCont = document.getElementById("home__logoutCont");
+let home__logoutBtn = document.getElementById("home__logoutBtn");
+
+home__logoutBtn.addEventListener("click", () => {
+  if (currentUser) {
+    currentUser = null;
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("currentUserId");
+    alert("logged out Successfully!");
+    window.location.reload();
+  }
+});
+
+if (currentUser) {
+  home__login.addEventListener("mouseenter", () => {
+    home__logoutCont.style.display = "block";
+  });
+
+  home__nav.addEventListener("mouseleave", () => {
+    home__logoutCont.style.display = "none";
+  });
+}
 
 if (currentUser) {
   home__login.innerText = `Hi, ${currentUser}`;
@@ -53,7 +76,6 @@ let home__subCategoryCont = document.querySelectorAll("#home__subCategoryCont");
 let home__subCategoryMainCont = document.getElementById(
   "home__subCategoryMainCont"
 );
-let home__nav = document.getElementById("home__nav");
 
 home__categoryName.forEach((el) => {
   el.addEventListener("mouseenter", (e) => {

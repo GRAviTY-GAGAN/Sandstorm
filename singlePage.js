@@ -63,6 +63,7 @@ function check(data) {
   data.forEach((element) => {
     let img = document.createElement("img");
     img.src = element.image;
+    img.id = "single__productImg";
     let p = document.createElement("h1");
     p.innerText = element.title;
 

@@ -27,7 +27,6 @@ let taxes = 3097;
 let shippingPrice = 599;
 let cartLength = cart.length;
 
-
 // totalSection(carttotal, texas, totalitem);
 
 window.addEventListener("load", () => {
@@ -170,9 +169,9 @@ orderplaceBtn.addEventListener("click", () => {
             JSON.stringify(deliveryLsdata)
           );
           console.log(res);
+          window.location.href = "index.html";
           alert(`Hey ${currentUser} your order has been Successfully placed.`);
           // displayandShow(cart);
-          window.location.href = "index.html";
         })
         .catch((err) => {
           console.log(err);

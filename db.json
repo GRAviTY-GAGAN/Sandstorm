@@ -16,39 +16,9 @@
       "name": "GAGAN",
       "history": [
         {
-          "date": "February 26th 2023, 3:54:13 pm",
-          "orderTotal": 9535,
+          "date": "February 27th 2023, 10:13:55 am",
+          "orderTotal": 46857,
           "prducts": [
-            {
-              "id": 1677005125488,
-              "image": "https://n.nordstrommedia.com/id/sr3/3b53dc7e-cc0f-4c80-8511-7d69079e49ad.jpeg?q=45&dpr=2&h=365.31&w=230",
-              "title": "Ponte Ankle Pants",
-              "description": "A nicely weighted ponte knit creates a sleek, stretchy fit for slim pants styled with a clean front and cut to a contemporary ankle length.",
-              "price": 2851,
-              "gender": "Women",
-              "category": "Bottom",
-              "rating": 4,
-              "size": "S",
-              "qty": 1
-            }
-          ]
-        },
-        {
-          "date": "February 26th 2023, 3:55:27 pm",
-          "orderTotal": 21933,
-          "prducts": [
-            {
-              "id": 1676920218770,
-              "image": "https://n.nordstrommedia.com/id/sr3/285f13d7-39ac-482e-81ad-0615cab19cf6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
-              "title": "Long Sleeve Pocket T-Shirt",
-              "description": "Smart logo embroidery elevates a versatile T-shirt shaped from soft, heavyweight cotton.",
-              "price": 4459,
-              "gender": "Men",
-              "category": "Top",
-              "rating": 4,
-              "size": "M",
-              "qty": 1
-            },
             {
               "id": 1677005529024,
               "image": "https://n.nordstrommedia.com/id/sr3/8461b200-438a-4725-ac11-8a239d0bdd99.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -59,14 +29,56 @@
               "category": "Top",
               "rating": 5,
               "size": "M",
+              "qty": 4
+            }
+          ]
+        },
+        {
+          "date": "February 27th 2023, 10:27:43 am",
+          "orderTotal": 17996,
+          "prducts": [
+            {
+              "id": 1676920061140,
+              "image": "https://n.nordstrommedia.com/id/sr3/8d886e48-5a30-4f6a-b3ed-4446b48158c3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Men's Club Crewneck Sweatshirt",
+              "description": "This crewneck sweatshirt cut from lightweight fleece is one you'll want in every color.",
+              "price": 2500,
+              "gender": "Men",
+              "category": "Top",
+              "rating": 153,
+              "size": "M",
+              "qty": 3
+            },
+            {
+              "id": 1677221206099,
+              "image": "https://n.nordstrommedia.com/id/sr3/103d753c-e286-4f64-a332-5df03f23a5a0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Classic Fit Overcoat",
+              "description": "Classic and versatile, this wardrobe-staple black overcoat sports crisply notched lapels and a length that hits smartly at the knees.",
+              "price": 5800,
+              "gender": "Boy",
+              "category": "Top",
+              "rating": 4,
+              "size": "M",
               "qty": 1
             }
           ]
         },
         {
-          "date": "February 26th 2023, 4:06:56 pm",
-          "orderTotal": 21504,
+          "date": "February 27th 2023, 12:55:14 pm",
+          "orderTotal": 63360,
           "prducts": [
+            {
+              "id": 1677475325661,
+              "image": "https://n.nordstrommedia.com/id/sr3/d98b10ae-3689-451a-a94d-591720918e00.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+              "title": "Air Force 1 '07 LV8 Sneaker",
+              "description": "Nike's first Air-cushioned basketball shoe kicks fresh energy into its throwback vibes as a modern street sneaker popping with surprise-and-delight details.",
+              "price": 11594,
+              "gender": "Men",
+              "category": "Footware",
+              "rating": 15,
+              "size": "M",
+              "qty": 1
+            },
             {
               "id": 1677006053559,
               "image": "https://n.nordstrommedia.com/id/sr3/3998f1f0-fca5-405c-83d1-366facfe71e5.jpeg?h=365&w=240&dpr=2",
@@ -80,16 +92,34 @@
               "qty": 1
             },
             {
-              "id": 1677221514635,
-              "image": "https://n.nordstrommedia.com/id/sr3/496f6352-6d64-4a41-aeee-46d49cebe8c7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
-              "title": "Classic Fit Bomber Jacket",
-              "description": "Sport an iconic athletic look in this bright-blue bomber jacket featuring minimalist styling and all the classic details.",
-              "price": 8000,
-              "gender": "Men",
-              "category": "Top",
-              "rating": 3,
-              "size": "M",
+              "id": 1677007145190,
+              "image": "https://n.nordstrommedia.com/id/sr3/4bcbdb6e-8ee4-4609-88b0-f515bbf7bde6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+              "title": "Paradis Ruffle Silk Midi Dress",
+              "description": "This rich silk midi is covered in romantic blooms and accented with soft ruffles and a smocked waist.",
+              "price": 38262,
+              "gender": "Women",
+              "category": "Dress",
+              "rating": 5,
+              "size": "S",
               "qty": 1
+            }
+          ]
+        },
+        {
+          "date": "February 27th 2023, 3:09:16 pm",
+          "orderTotal": 61667,
+          "prducts": [
+            {
+              "id": 1677475325661,
+              "image": "https://n.nordstrommedia.com/id/sr3/d98b10ae-3689-451a-a94d-591720918e00.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+              "title": "Air Force 1 '07 LV8 Sneaker",
+              "description": "Nike's first Air-cushioned basketball shoe kicks fresh energy into its throwback vibes as a modern street sneaker popping with surprise-and-delight details.",
+              "price": 11594,
+              "gender": "Men",
+              "category": "Footware",
+              "rating": 15,
+              "size": "M",
+              "qty": 5
             }
           ]
         }
@@ -167,6 +197,30 @@
           ]
         }
       ]
+    },
+    {
+      "id": "saur@gmail.com",
+      "pass": "1234",
+      "name": "dffa",
+      "history": []
+    },
+    {
+      "id": "adfhfak@gmial.com",
+      "pass": "1234",
+      "name": "fa",
+      "history": []
+    },
+    {
+      "id": "name@gmail.com",
+      "pass": "1234",
+      "name": "gsgts",
+      "history": []
+    },
+    {
+      "id": "fihiowjefio@gmai.com",
+      "pass": "1234",
+      "name": "udhikd",
+      "history": []
     }
   ],
   "products": [
@@ -1009,6 +1063,46 @@
       "gender": "Girl",
       "category": "Dress",
       "rating": 3
+    },
+    {
+      "id": 1677474446225,
+      "image": "https://n.nordstrommedia.com/id/sr3/427a3f53-2269-4b8b-ab21-0f03d2525be5.jpeg?h=365&w=240&dpr=2",
+      "title": "Tivoli IV Waterproof Tall Winter Boot",
+      "description": "Take on Old Man Winter's worst with confidence in this waterproof boot built to keep feet snug and dry no matter the conditions.",
+      "price": 8093,
+      "gender": "Women",
+      "category": "Footware",
+      "rating": 337
+    },
+    {
+      "id": 1677474611834,
+      "image": "https://n.nordstrommedia.com/id/sr3/9c3105f8-127b-4791-b200-48e3d4162ce5.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+      "title": "Elise Ballet Flat",
+      "description": "A stretchy topline brings comfort to a bow-trimmed ballet flat that’s great for any wardrobe.",
+      "price": 1068,
+      "gender": "Girl",
+      "category": "Footware",
+      "rating": 5
+    },
+    {
+      "id": 1677475325661,
+      "image": "https://n.nordstrommedia.com/id/sr3/d98b10ae-3689-451a-a94d-591720918e00.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+      "title": "Air Force 1 '07 LV8 Sneaker",
+      "description": "Nike's first Air-cushioned basketball shoe kicks fresh energy into its throwback vibes as a modern street sneaker popping with surprise-and-delight details.",
+      "price": 11594,
+      "gender": "Men",
+      "category": "Footware",
+      "rating": 15
+    },
+    {
+      "id": 1677490957684,
+      "image": "https://n.nordstrommedia.com/id/sr3/e09e5ca6-3242-46bb-8728-c259a6c96ea5.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+      "title": "gsd",
+      "description": "dcsf",
+      "price": 2345,
+      "gender": "Women",
+      "category": "Bottom",
+      "rating": 3
     }
   ],
   "existingUsers": [
@@ -1026,6 +1120,18 @@
     },
     {
       "id": "raushankumar241099@gmail.com"
+    },
+    {
+      "id": "saur@gmail.com"
+    },
+    {
+      "id": "adfhfak@gmial.com"
+    },
+    {
+      "id": "name@gmail.com"
+    },
+    {
+      "id": "fihiowjefio@gmai.com"
     }
   ]
 }

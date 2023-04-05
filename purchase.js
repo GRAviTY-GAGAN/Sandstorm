@@ -1,6 +1,7 @@
 let currentUser = localStorage.getItem("currentUser") || null;
 let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
-let baseURL = "http://localhost:3000";
+// let baseURL = "http://localhost:3000";
+let baseURL = `https://nordstorm-db-json.onrender.com`;
 let currentUserId = localStorage.getItem("currentUserId") || null;
 let purchaseHistory = [];
 
@@ -11,7 +12,7 @@ window.addEventListener("load", () => {
     .then((req) => req.json())
     .then((res) => {
       console.log(res.history);
-      purchaseHistory = [...res.history];
+      purchaseHistory = [...res.history.reverse()];
       updatePurchasePage(purchaseHistory);
     });
 });

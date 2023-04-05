@@ -1,4 +1,5 @@
-let baseURL = "http://localhost:3000";
+// let baseURL = "http://localhost:3000";
+let baseURL = `https://nordstorm-db-json.onrender.com`;
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let currentUser = JSON.parse(localStorage.getItem("currentUser") || null);
 

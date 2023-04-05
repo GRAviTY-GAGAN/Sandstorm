@@ -14,7 +14,8 @@ let postProductBtn = document.getElementById("postProductBtn");
 let patchProductBtn = document.getElementById("patchProductBtn");
 let goToHomePage = document.getElementById("goToHomePage");
 
-let baseURL = "http://localhost:3000";
+// let baseURL = "http://localhost:3000";
+let baseURL = `https://nordstorm-db-json.onrender.com`;
 
 let adminProductsData = [];
 

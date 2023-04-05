@@ -98,7 +98,8 @@ products__typeCollaps.addEventListener("click", () => {
   products__productTypeFilter.style.height = "56px";
 });
 
-let baseURL = "http://localhost:3000";
+// let baseURL = "http://localhost:3000";
+let baseURL = `https://nordstorm-db-json.onrender.com`;
 let productsData = [];
 let emojiArr = ["😑", "🤔", "😔", "😓", "😖", "😢", "😭", "🥺", "😟", "😒"];
 let cart = JSON.parse(localStorage.getItem(currentUser)) || [];

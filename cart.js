@@ -32,7 +32,8 @@ if (currentUser) {
   });
 }
 
-let baseURL = "http://localhost:3000";
+// let baseURL = "http://localhost:3000";
+let baseURL = `https://nordstorm-db-json.onrender.com`;
 let currentUserId = localStorage.getItem("currentUserId") || null;
 let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 

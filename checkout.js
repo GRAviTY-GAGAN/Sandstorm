@@ -10,7 +10,8 @@ let cartTotal;
 let methodToggle = JSON.parse(localStorage.getItem("method-toggle")) || "";
 let currentUser = localStorage.getItem("currentUser") || null;
 let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
-let baseURL = "http://localhost:3000";
+// let baseURL = "http://localhost:3000";
+let baseURL = `https://nordstorm-db-json.onrender.com`;
 let currentUserId = localStorage.getItem("currentUserId") || null;
 let checkout__totalSectionItemValue = document.getElementById(
   "checkout__totalSectionItemValue"

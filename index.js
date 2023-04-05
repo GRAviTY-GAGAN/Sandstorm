@@ -6,7 +6,8 @@ let adminFormUsername = document.getElementById("adminFormUsername");
 let adminFormPassword = document.getElementById("adminFormPassword");
 let home__nav = document.getElementById("home__nav");
 
-let baseURL = "http://localhost:3000";
+// let baseURL = "http://localhost:3000";
+let baseURL = `https://nordstorm-db-json.onrender.com`;
 let currentUser = localStorage.getItem("currentUser") || null;
 let cart = JSON.parse(localStorage.getItem(currentUser)) || [];
 

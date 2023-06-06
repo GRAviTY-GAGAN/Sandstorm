@@ -182,3 +182,63 @@ orderplaceBtn.addEventListener("click", () => {
     alert("Please login first");
   }
 });
+
+// navbar start-------------------------------------------------------------------
+let home__searchBar = document.getElementById("home__searchBar");
+let home__cart = document.getElementById("home__cart");
+let home__logo = document.getElementById("home__logo");
+let home__cartLength = document.getElementById("home__cartLength");
+let home__purchase = document.getElementById("home__purchase");
+let home__login = document.getElementById("home__login");
+let home__logoutCont = document.getElementById("home__logoutCont");
+let home__logoutBtn = document.getElementById("home__logoutBtn");
+
+home__logoutBtn.addEventListener("click", () => {
+  if (currentUser) {
+    currentUser = null;
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("currentUserId");
+    alert("logged out Successfully!");
+    window.location.reload();
+  }
+});
+
+if (currentUser) {
+  home__login.addEventListener("mouseenter", () => {
+    home__logoutCont.style.display = "block";
+  });
+
+  home__nav.addEventListener("mouseleave", () => {
+    home__logoutCont.style.display = "none";
+  });
+}
+
+if (currentUser) {
+  home__login.innerText = `Hi, ${currentUser}`;
+} else {
+  home__login.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+}
+
+home__purchase.addEventListener("click", () => {
+  window.location.href = "purchase.html";
+});
+
+home__logo.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+home__searchBar.addEventListener("click", () => {
+  window.location.href = "products.html";
+});
+
+home__cart.addEventListener("click", () => {
+  window.location.href = "cart.html";
+});
+
+window.addEventListener("load", () => {
+  home__cartLength.innerText = cart.length;
+});
+
+// navbar End------------------------------------------------------------------------

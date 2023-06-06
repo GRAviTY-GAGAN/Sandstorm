@@ -34,7 +34,7 @@
   </head>
 
   <body>
-    <nav>
+    <!-- <nav>
       <div id="nav">
         <a href="./index.html">
           <img src="./LOGOS/main-Logo.png" alt="Logos"
@@ -43,213 +43,246 @@
           <img src="./LOGOS/icons8-shopping-bag-50.png" alt=""
         /></a>
       </div>
-    </nav>
-
-    <!-- main section  -->
-    <div id="main">
-      <div class="divleft">
-        <div id="securecheckout">
-          <img src="./LOGOS/icons8-unlock-private-50.png" alt="" />
-          <span>
-            <h2>Secure Checkout</h2>
-          </span>
-          <span>
-            <h4>powered by Borderfree</h4>
-          </span>
-
-          <!-- <h4 id="English">English</h4> -->
-          <select name="" id="langselect">
-            <option value="">English</option>
-            <option value="">Hindi</option>
-            <option value="">spanish</option>
-          </select>
+    </nav> -->
+    <div id="home__mainCont">
+      <nav id="home__nav">
+        <div id="home__logo"><h1>SANDSTORM</h1></div>
+        <div id="home__searchBarCont">
+          <div id="home__searchBar">
+            <i class="fa-solid fa-magnifying-glass"></i
+            ><input type="text" placeholder="Search for Products" />
+          </div>
         </div>
-        <h4 id="BorderfreeAccount">
-          Already have a Borderfree account?<span>Click here</span>
-        </h4>
-        <hr />
-        <!-- address section starrt -->
-        <div id="deliveryaddress">
-          <p id="dilivery">Delivery</p>
-
-          <input type="email" name="" id="email" placeholder="Email" required />
-          <div class="twoInput">
-            <input type="text" id="fname" placeholder="First Name" required />
-            <input type="text" id="lname" placeholder="Last Name" required />
+        <div id="home__linksCont">
+          <div id="home__login">Login</div>
+          <div id="home__purchase">Purchases</div>
+          <div id="home__cart">
+            <div id="home__cartLength">0</div>
+            <i class="fa-solid fa-cart-arrow-down"></i>
           </div>
+        </div>
+        <div id="home__logoutCont">
+          <h2 id="home__logoutBtn">Log out</h2>
+        </div>
+      </nav>
 
-          <input
-            type="text"
-            name=""
-            id="address"
-            placeholder="Address"
-            required
-          />
+      <!-- main section  -->
+      <div id="main">
+        <div class="divleft">
+          <div id="securecheckout">
+            <img src="./LOGOS/icons8-unlock-private-50.png" alt="" />
+            <span>
+              <h2>Secure Checkout</h2>
+            </span>
+            <span>
+              <h4>powered by Borderfree</h4>
+            </span>
 
-          <div class="twoInput">
-            <input type="text" id="address2" placeholder="Adedress(optional)" />
-            <input
-              type="text"
-              id="Postalcode"
-              placeholder="Postal code"
-              required
-            />
-          </div>
-          <div class="twoInput">
-            <input type="text" id="city" placeholder="City" required />
-            <input type="text" id="state" placeholder="State" required />
-          </div>
-          <div class="twoInput">
-            <input type="tel" id="phone" placeholder="Phone " required />
-            <select name="LOACTION" id="location">
-              <option value="IndiA">India</option>
-              <option value="USA">USA</option>
-              <option value="UK">UK</option>
-              <option value="CANADA">Canada</option>
+            <!-- <h4 id="English">English</h4> -->
+            <select name="" id="langselect">
+              <option value="">English</option>
+              <option value="">Hindi</option>
+              <option value="">spanish</option>
             </select>
           </div>
-        </div>
-        <!-- ***********************************************************-->
-        <!-- shipping method section -->
-        <div class="shipinghead">
-          <h4>Delivery Method</h4>
-          <h4>Estimated Arrival</h4>
-          <h4>Shipping Cost</h4>
-        </div>
+          <h4 id="BorderfreeAccount">
+            Already have a Borderfree account?<span>Click here</span>
+          </h4>
+          <hr />
+          <!-- address section starrt -->
+          <div id="deliveryaddress">
+            <p id="dilivery">Delivery</p>
 
-        <form>
-          <fieldset>
-            <legend><h4>Please Select Your Delivery Method:</h4></legend>
-            <div class="shipingoption">
-              <input
-                type="radio"
-                data-name="standard-1"
-                id="standard-1"
-                name="drone"
-                value="4097"
-              />
-              <div>
-                Standard
-                <div>No additional import charges at delivery</div>
-              </div>
-              <div>11–21 business days</div>
-              <div>(INR) ₹4097</div>
+            <input
+              type="email"
+              name=""
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <div class="twoInput">
+              <input type="text" id="fname" placeholder="First Name" required />
+              <input type="text" id="lname" placeholder="Last Name" required />
             </div>
 
-            <div class="shipingoption">
+            <input
+              type="text"
+              name=""
+              id="address"
+              placeholder="Address"
+              required
+            />
+
+            <div class="twoInput">
               <input
-                type="radio"
-                data-name="standard-2"
-                id="standard-2"
-                name="drone"
-                value="3098"
+                type="text"
+                id="address2"
+                placeholder="Adedress(optional)"
               />
-              <div>
-                Standard
-                <div>Import charges collected upon delivery</div>
-              </div>
-              <div>11–21 business days</div>
-              <div>(INR) ₹3,098</div>
-            </div>
-
-            <div class="shipingoption">
               <input
-                type="radio"
-                data-name="express-1"
-                id="express-1"
-                name="drone"
-                value="6085"
+                type="text"
+                id="Postalcode"
+                placeholder="Postal code"
+                required
               />
-              <div>
-                Express
-                <div>No additional import charges at delivery</div>
-              </div>
-              <div>06-11 business days</div>
-              <div>(INR) ₹6085</div>
             </div>
-
-            <div class="shipingoption">
-              <input
-                type="radio"
-                data-name="express-2"
-                id="express-2"
-                name="drone"
-                value="5085"
-              />
-              <div>
-                Express
-                <div>Import charges collected upon delivery</div>
-              </div>
-              <div>06-11 business days</div>
-              <div>(INR) ₹5085</div>
+            <div class="twoInput">
+              <input type="text" id="city" placeholder="City" required />
+              <input type="text" id="state" placeholder="State" required />
             </div>
-          </fieldset>
-        </form>
-
-        <!-- data section  -->
-
-        <div id="checkoutbtn">
-          <button id="btnCheckout">Continue</button>
-        </div>
-
-        <hr />
-        <p id="dilivery">Payment</p>
-        <hr />
-        <p id="buttomtext">
-          By placing your order, you agree to the Terms & Conditions and Privacy
-          Policy of Boderfree, a Global-e company, Nordstrom’s international
-          fulfillment service. Borderfree is an online merchant that is located
-          at 200 West 41st Street, New York, NY 10036, US.
-        </p>
-      </div>
-
-      <!-- ***************************************** -->
-      <!-- rigth box started -->
-      <div class="divright">
-        <div id="orderbox">
-          <div>
-            <!-- <img src="./LOGOS/icons8-shopping-cart-50.png" alt=""> -->
-            <i class="fa-solid fa-cart-shopping size"></i>
-            <h2>Your Order</h2>
-            <div id="checkout__totalSection">
-              <p id="checkout__totalSectionItem">
-                ITEM: <span id="checkout__totalSectionItemValue"></span>
-              </p>
-              <p id="checkout__totalSectionShip">
-                SHIPPING: <span id="checkout__totalSectionShipValue">₹599</span>
-              </p>
-              <p id="checkout___totalSectionDuties">
-                DUTIES AND TAXES: ₹
-                <span id="checkout__totalSectionDutiesValue">3097</span>
-              </p>
-              <p id="checkout___totalSectionTotal">
-                TOTAL VALUE:
-                <span id="checkout___totalSectionTotalValue"></span>
-              </p>
-              <p id="checkout___"></p>
+            <div class="twoInput">
+              <input type="tel" id="phone" placeholder="Phone " required />
+              <select name="LOACTION" id="location">
+                <option value="IndiA">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="CANADA">Canada</option>
+              </select>
             </div>
           </div>
+          <!-- ***********************************************************-->
+          <!-- shipping method section -->
+          <div class="shipinghead">
+            <h4>Delivery Method</h4>
+            <h4>Estimated Arrival</h4>
+            <h4>Shipping Cost</h4>
+          </div>
 
-          <!-- total section -->
-          <div id="cardToTalSection"></div>
+          <form>
+            <fieldset>
+              <legend><h4>Please Select Your Delivery Method:</h4></legend>
+              <div class="shipingoption">
+                <input
+                  type="radio"
+                  data-name="standard-1"
+                  id="standard-1"
+                  name="drone"
+                  value="4097"
+                />
+                <div>
+                  Standard
+                  <div>No additional import charges at delivery</div>
+                </div>
+                <div>11–21 business days</div>
+                <div>(INR) ₹4097</div>
+              </div>
+
+              <div class="shipingoption">
+                <input
+                  type="radio"
+                  data-name="standard-2"
+                  id="standard-2"
+                  name="drone"
+                  value="3098"
+                />
+                <div>
+                  Standard
+                  <div>Import charges collected upon delivery</div>
+                </div>
+                <div>11–21 business days</div>
+                <div>(INR) ₹3,098</div>
+              </div>
+
+              <div class="shipingoption">
+                <input
+                  type="radio"
+                  data-name="express-1"
+                  id="express-1"
+                  name="drone"
+                  value="6085"
+                />
+                <div>
+                  Express
+                  <div>No additional import charges at delivery</div>
+                </div>
+                <div>06-11 business days</div>
+                <div>(INR) ₹6085</div>
+              </div>
+
+              <div class="shipingoption">
+                <input
+                  type="radio"
+                  data-name="express-2"
+                  id="express-2"
+                  name="drone"
+                  value="5085"
+                />
+                <div>
+                  Express
+                  <div>Import charges collected upon delivery</div>
+                </div>
+                <div>06-11 business days</div>
+                <div>(INR) ₹5085</div>
+              </div>
+            </fieldset>
+          </form>
+
+          <!-- data section  -->
+
+          <div id="checkoutbtn">
+            <button id="btnCheckout">Continue</button>
+          </div>
+
+          <hr />
+          <p id="dilivery">Payment</p>
+          <hr />
+          <p id="buttomtext">
+            By placing your order, you agree to the Terms & Conditions and
+            Privacy Policy of Boderfree, a Global-e company, Nordstrom’s
+            international fulfillment service. Borderfree is an online merchant
+            that is located at 200 West 41st Street, New York, NY 10036, US.
+          </p>
         </div>
 
-        <hr />
-        <div id="promocode">Promo code</div>
+        <!-- ***************************************** -->
+        <!-- rigth box started -->
+        <div class="divright">
+          <div id="orderbox">
+            <div>
+              <!-- <img src="./LOGOS/icons8-shopping-cart-50.png" alt=""> -->
+              <i class="fa-solid fa-cart-shopping size"></i>
+              <h2>Your Order</h2>
+              <div id="checkout__totalSection">
+                <p id="checkout__totalSectionItem">
+                  ITEM: <span id="checkout__totalSectionItemValue"></span>
+                </p>
+                <p id="checkout__totalSectionShip">
+                  SHIPPING:
+                  <span id="checkout__totalSectionShipValue">₹599</span>
+                </p>
+                <p id="checkout___totalSectionDuties">
+                  DUTIES AND TAXES: ₹
+                  <span id="checkout__totalSectionDutiesValue">3097</span>
+                </p>
+                <p id="checkout___totalSectionTotal">
+                  TOTAL VALUE:
+                  <span id="checkout___totalSectionTotalValue"></span>
+                </p>
+                <p id="checkout___"></p>
+              </div>
+            </div>
 
-        <div id="promoapply">
-          <input
-            type="text"
-            id="promocode"
-            value=""
-            placeholder=" Enter Promo Code "
-          />
-          <button>Apply</button>
-        </div>
-        <hr />
+            <!-- total section -->
+            <div id="cardToTalSection"></div>
+          </div>
 
-        <div id="item">
-          <!-- append data here -->
+          <hr />
+          <div id="promocode">Promo code</div>
+
+          <div id="promoapply">
+            <input
+              type="text"
+              id="promocode"
+              value=""
+              placeholder=" Enter Promo Code "
+            />
+            <button>Apply</button>
+          </div>
+          <hr />
+
+          <div id="item">
+            <!-- append data here -->
+          </div>
         </div>
       </div>
     </div>

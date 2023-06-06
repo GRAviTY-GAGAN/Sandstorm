@@ -390,3 +390,150 @@ p:nth-of-type(3) {
 }
 
 /* Footer Styles Ends------------------------------------------ */
+
+#products__productTypeFilter {
+    min-height: 56px;
+}
+
+@media screen and (max-width:500px) {
+
+    #home__footerSubCont {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #home__footerTermsandCondition {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #home__footer {
+        padding: 1rem;
+    }
+
+    #home__mainCont {
+        padding: 0 1rem;
+    }
+
+    #home__logo>h1 {
+        font-size: x-large;
+        text-align: center;
+        padding: 0 0rem 1rem 0;
+    }
+
+    #home__nav {
+        display: block;
+    }
+
+    #home__searchBarCont {
+        width: 100%;
+    }
+
+    #home__linksCont {
+        width: 100%;
+        padding: 2rem 1rem 0 0;
+    }
+
+    #home__navCategory {
+        display: none;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    #home__categoryName {
+        border-bottom: 1px solid transparent;
+    }
+
+    #home__categoryName:hover {
+        border-bottom: 1px solid black;
+    }
+
+
+
+    #products__mainCont {
+        padding: 0 1rem;
+    }
+
+
+}
+
+@media screen and (min-width:501px) and (max-width:900px) {
+    #home__nav {
+        flex-wrap: wrap;
+    }
+
+    #home__searchBarCont {
+        width: 60%;
+    }
+
+    #home__linksCont {
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4rem;
+        padding: 2rem 1rem 0 0;
+    }
+
+
+    #home__navCategory {
+        flex-wrap: wrap;
+        /* gap: 1rem; */
+        column-gap: 2rem;
+        row-gap: 0.5rem;
+    }
+
+    #products__productTypeFilter {
+        height: 74px;
+    }
+
+    #products__ImgCont {
+        min-height: 234px;
+    }
+
+    .product__productCard img {
+        min-height: 210px;
+    }
+
+    #products__productsCont {
+        position: relative;
+        top: 78px;
+    }
+
+
+    #home__footer {
+        z-index: 1;
+        position: relative;
+    }
+
+
+
+}
+
+@media screen and (max-width:500px) {
+    #products__filtersCont {
+        display: block;
+        width: 100%;
+    }
+
+    #products__productsMainCont {
+        display: block;
+    }
+
+    #products__filterAddMainCont {
+        display: none;
+    }
+
+    .product__productCard img {
+        min-height: 150px;
+    }
+
+    #products__ImgCont {
+        min-height: 240px;
+    }
+
+    #products__productsCont {
+        margin-top: 2rem;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
